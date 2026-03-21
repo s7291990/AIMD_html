@@ -39,7 +39,7 @@
         <img src="../../assets/image/etc/etc-logo.svg" alt="올림포스 로고" />
       </h1>
       <div class="page-name">자산 정보</div>
-      <button class="logout">로그아웃</button>
+      <button class="btn primary">로그아웃</button>
     </header>
 
     <div class="container">
@@ -221,25 +221,23 @@
         <div class="page-header">
           <div class="search-section">
             <div class="search-filters">
-              <div class="filter-group">
-                <select class="select">
-                  <option>모델명</option>
-                </select>
-              </div>
+
               <div class="search-input-group">
                 <input
                   type="text"
                   placeholder="검색어를 입력하세요"
-                  class="search-input datetimepicker"
+                  class="search-input"
                 />
-                <button class="search-btn">검색</button>
-                <button class="reset-btn">초기화</button>
+                <button class="search-btn"><img src="../../assets/image/ico/ico-search.svg" alt="검색" /></button>
               </div>
             </div>
           </div>
           <div class="page-header-container">
-            <button type="button">차량 등록</button>
-            <button type="button">차량 등록</button>
+            <button type="button" class="icon-btn"><img src="../../assets/image/ico/ico-side-search.svg" alt="" /></button>
+            <button type="button" class="icon-btn"><img src="../../assets/image/ico/ico-side-copy.svg" alt="" /></button>
+            <button type="button" class="icon-btn"><img src="../../assets/image/ico/ico-side-add.svg" alt="" /></button>
+            <button type="button" class="icon-btn"><img src="../../assets/image/ico/ico-side-register.svg" alt="" /></button>
+            <button type="button" class="icon-btn"><img src="../../assets/image/ico/ico-side-delete.svg" alt="" /></button>
           </div>
         </div>
 
@@ -247,227 +245,511 @@
           <!-- Table -->
           <div class="table-container">
             <table id="tableGrid" class="display">
-              <thead>
+              <thead class="custom-head">
                 <tr>
-                  <th>시나리오 ID</th>
-                  <th>이미지ID</th>
-                  <th>이미지</th>
-                  <th>파일 경로/URL</th>
-                  <th>이미지 종류</th>
-                  <th>시스템타임</th>
+                  <th rowspan="3" colspan="3">아군무기 / 적군무기</th>
+                  <th>화포</th>
+                  <th>화포</th>
+                  <th>전차</th>
+                  <th>화포</th>
+                  <th>소화기</th>
+                  <th>대전차화기</th>
                 </tr>
                 <tr>
-                  <th>시나리오 ID</th>
-                  <th>이미지ID</th>
-                  <th>이미지</th>
-                  <th>파일 경로/URL</th>
-                  <th>이미지 종류</th>
-                  <th>시스템타임</th>
+                  <th>82mm박격포</th>
+                  <th>76.2mm박격포</th>
+                  <th>천마호</th>
+                  <th>120mm박격포</th>
+                  <th>경기관총</th>
+                  <th>경기관총</th>
+                </tr>
+                <tr>
+                  <th>3문</th>
+                  <th>6문</th>
+                  <th>1대</th>
+                  <th>18문</th>
+                  <th>3개</th>
+                  <th>3개</th>
                 </tr>
               </thead>
             </table>
             <script>
               var data = [
                 [
-                  "Tiger Nixon",
-                  "System Architect",
-                  "Edinburgh",
-                  "5421",
-                  "2011/04/25",
-                  "$3,120",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Garrett Winters",
-                  "Director",
-                  "Edinburgh",
-                  "8422",
-                  "2011/07/25",
-                  "$5,300",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Tiger Nixon",
-                  "System Architect",
-                  "Edinburgh",
-                  "5421",
-                  "2011/04/25",
-                  "$3,120",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Garrett Winters",
-                  "Director",
-                  "Edinburgh",
-                  "8422",
-                  "2011/07/25",
-                  "$5,300",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Tiger Nixon",
-                  "System Architect",
-                  "Edinburgh",
-                  "5421",
-                  "2011/04/25",
-                  "$3,120",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Garrett Winters",
-                  "Director",
-                  "Edinburgh",
-                  "8422",
-                  "2011/07/25",
-                  "$5,300",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Tiger Nixon",
-                  "System Architect",
-                  "Edinburgh",
-                  "5421",
-                  "2011/04/25",
-                  "$3,120",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Garrett Winters",
-                  "Director",
-                  "Edinburgh",
-                  "8422",
-                  "2011/07/25",
-                  "$5,300",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Tiger Nixon",
-                  "System Architect",
-                  "Edinburgh",
-                  "5421",
-                  "2011/04/25",
-                  "$3,120",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Garrett Winters",
-                  "Director",
-                  "Edinburgh",
-                  "8422",
-                  "2011/07/25",
-                  "$5,300",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Tiger Nixon",
-                  "System Architect",
-                  "Edinburgh",
-                  "5421",
-                  "2011/04/25",
-                  "$3,120",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Garrett Winters",
-                  "Director",
-                  "Edinburgh",
-                  "8422",
-                  "2011/07/25",
-                  "$5,300",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Tiger Nixon",
-                  "System Architect",
-                  "Edinburgh",
-                  "5421",
-                  "2011/04/25",
-                  "$3,120",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Garrett Winters",
-                  "Director",
-                  "Edinburgh",
-                  "8422",
-                  "2011/07/25",
-                  "$5,300",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Tiger Nixon",
-                  "System Architect",
-                  "Edinburgh",
-                  "5421",
-                  "2011/04/25",
-                  "$3,120",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Garrett Winters",
-                  "Director",
-                  "Edinburgh",
-                  "8422",
-                  "2011/07/25",
-                  "$5,300",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Tiger Nixon",
-                  "System Architect",
-                  "Edinburgh",
-                  "5421",
-                  "2011/04/25",
-                  "$3,120",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Garrett Winters",
-                  "Director",
-                  "Edinburgh",
-                  "8422",
-                  "2011/07/25",
-                  "$5,300",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Tiger Nixon",
-                  "System Architect",
-                  "Edinburgh",
-                  "5421",
-                  "2011/04/25",
-                  "$3,120",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Garrett Winters",
-                  "Director",
-                  "Edinburgh",
-                  "8422",
-                  "2011/07/25",
-                  "$5,300",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Tiger Nixon",
-                  "System Architect",
-                  "Edinburgh",
-                  "5421",
-                  "2011/04/25",
-                  "$3,120",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Garrett Winters",
-                  "Director",
-                  "Edinburgh",
-                  "8422",
-                  "2011/07/25",
-                  "$5,300",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Tiger Nixon",
-                  "System Architect",
-                  "Edinburgh",
-                  "5421",
-                  "2011/04/25",
-                  "$3,120",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
                 [
-                  "Garrett Winters",
-                  "Director",
-                  "Edinburgh",
-                  "8422",
-                  "2011/07/25",
-                  "$5,300",
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
+                ],
+                [
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
+                ],
+                [
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
+                ],
+                [
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
+                ],
+                [
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
+                ],
+                [
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
+                ],
+                [
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
+                ],
+                [
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
+                ],
+                [
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
+                ],
+                [
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
+                ],
+                [
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
+                ],
+                [
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
+                ],
+                [
+                  "대전차화기",
+                  "현궁",
+                  "1대",
+                  "4",
+                  "9",
+                  "2",
+                  "30",
+                  "0",
+                  "2",
+                  "1",
                 ],
               ];
               var tableWrap = document.querySelector(".table-container");
-              var scrollY =
-                (tableWrap &&
-                  getComputedStyle(tableWrap)
-                    .getPropertyValue("--dt-scroll-y")
-                    .trim()) ||
-                "calc(100vh - 280px)";
+              /** 래퍼 높이 − thead(또는 이후 .dt-scroll-head) − 상·하단 레이아웃(페이지크기/정보/페이징) 여유 */
+              function estimateScrollYBeforeInit() {
+                if (!tableWrap) {
+                  return "calc(100vh - 280px)";
+                }
+                var thead = document.querySelector("#tableGrid thead");
+                var theadH = thead ? thead.offsetHeight : 0;
+                var overhead = 130;
+                var px = Math.max(
+                  120,
+                  tableWrap.clientHeight - theadH - overhead,
+                );
+                return px + "px";
+              }
+              function fitScrollBodyHeight(api) {
+                var wrap = document.querySelector(".table-container");
+                if (!wrap) return;
+                var dt = wrap.querySelector(".dt-container");
+                var body = wrap.querySelector(".dt-scroll-body");
+                if (!dt || !body) return;
+                var head = wrap.querySelector(".dt-scroll-head");
+                var headH = head ? head.offsetHeight : 0;
+                var rows = dt.querySelectorAll(":scope > .dt-layout-row");
+                var used = 0;
+                for (var i = 0; i < rows.length; i++) {
+                  var row = rows[i];
+                  if (row.classList.contains("dt-layout-table")) {
+                    used += headH;
+                  } else {
+                    used += row.offsetHeight;
+                  }
+                }
+                var gap = 8;
+                var h = Math.max(80, wrap.clientHeight - used - gap);
+                body.style.height = h + "px";
+                body.style.maxHeight = h + "px";
+                if (api && api.columns) {
+                  api.columns.adjust();
+                }
+              }
+              var scrollY = estimateScrollYBeforeInit();
               var table = new DataTable("#tableGrid", {
                 //ajax: '../ajax/data/arrays.txt'
                 data: data,
@@ -480,29 +762,39 @@
                 scrollY: scrollY,
                 scrollCollapse: true,
                 language: {
-                  info: "검색 결과 _TOTAL_건 / _PAGE_페이지 선택",
-                  infoEmpty: "검색 결과 0건 / _PAGE_페이지 선택",
+                  info: "검색 결과 <strong>_TOTAL_</strong>건 / _PAGE_페이지 선택",
+                  infoEmpty:
+                    "검색 결과 <strong>_TOTAL_</strong>건 / _PAGE_페이지 선택",
                   infoFiltered: " (전체 _MAX_건 중)",
                 },
-                fixedColumns: {
-                  start: 0, // 왼쪽 3열 까지 고정
-                  end: 0, // 오른쪽 고정 없음
-                },
+                // fixedColumns: {
+                //   start: 3, // 왼쪽 3열 까지 고정
+                //   end: 0, // 오른쪽 고정 없음
+                // },
                 columnDefs: [
-                  { targets: 0, width: "120px", className: "col-scenario" },
-                  {
-                    targets: 2,
-                    createdCell: function (td, cellData) {
-                      if (cellData === "특정값") {
-                        td.classList.add("cell-highlight");
-                      }
-                    },
-                  },
+                  { targets: 0, width: "90px", className: "col-left" },
+                  { targets: 1, width: "150px", className: "col-left" },
+                  { targets: 2, width: "60px", className: "col-left" },
+                  // {
+                  //   targets: 2,
+                  //   createdCell: function (td, cellData) {
+                  //     if (cellData === "특정값") {
+                  //       td.classList.add("cell-highlight");
+                  //     }
+                  //   },
+                  // },
                 ],
+                fnInitComplete: function (settings) {
+                  var api = new DataTable.Api(settings);
+                  fitScrollBodyHeight(api);
+                  requestAnimationFrame(function () {
+                    fitScrollBodyHeight(api);
+                  });
+                },
               });
               table.columns.adjust();
               window.addEventListener("resize", function () {
-                table.columns.adjust();
+                fitScrollBodyHeight(table);
               });
             </script>
           </div>
@@ -512,28 +804,36 @@
             <h3 class="info-title">상세 정보</h3>
             <ul class="info-list">
               <li>
-                <div class="key">해상도 정보</div>
-                <div class="value">-</div>
+                <div class="key">아군/적군</div>
+                <div class="value">아군</div>
+              </li>
+              <li>
+                <div class="key">부대명</div>
+                <div class="value">1기계화사단</div>
+              </li>
+              <li>
+                <div class="key">부대인원</div>
+                <div class="value">1,000</div>
+              </li>
+              <li>
+                <div class="key">주요화력</div>
+                <div class="value"><strong>K1A2 전차</strong></div>
               </li>
               <li>
                 <div class="key">위도</div>
-                <div class="value">37.532532</div>
+                <div class="value"><strong>36.987654</strong></div>
               </li>
               <li>
                 <div class="key">경도</div>
-                <div class="value">127.352352</div>
+                <div class="value"><strong>127.543210</strong></div>
               </li>
               <li>
-                <div class="key">고도</div>
-                <div class="value">-</div>
+                <div class="key">탄수</div>
+                <div class="value">12000</div>
               </li>
               <li>
-                <div class="key">기타 메타데이터</div>
-                <div class="value">-</div>
-              </li>
-              <li>
-                <div class="key">시스템타임</div>
-                <div class="value">-</div>
+                <div class="key">탄종</div>
+                <div class="value">120mm APFSDS</div>
               </li>
             </ul>
           </div>

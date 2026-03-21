@@ -7,13 +7,12 @@
     0 0 5px 0 rgba(81, 91, 116, 0.08),
     0 3px 10px 0 rgba(81, 91, 116, 0.1);
   background: #fff;
-  height: calc(100vh - 140px);
+  height: calc(100vh - 150px);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   min-height: 0;
-  /* DataTables scrollY — tbody 스크롤 높이 (래퍼 높이에서 상·하단 컨트롤·테이블 헤더 여유분). 필요 시 수치만 조정 */
-  --dt-scroll-y: calc(100vh - 280px);
+  /* tbody 스크롤 높이: list.html에서 .table-container·thead·.dt-scroll-head·레이아웃 행 기준으로 JS 계산 */
 }
 
 .table-container > .dt-container {
@@ -30,7 +29,7 @@
 
 .list-info-container {
   width: 260px;
-  height: auto;
+  height: calc( 100vh - 150px );
   overflow: hidden;
   border-radius: 4px;
   box-shadow:
@@ -76,4 +75,29 @@
   font-size: 15px;
   font-weight: 500;
   color: #282d3b;
+}
+.search-input-group{
+  width: 200px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 4px;
+  background: #EFF1F5;
+  padding-right: 14px;
+}
+.search-input-group:hover{
+  background: #DADFE9;
+}
+.search-input-group input{
+  flex: 1;
+  width: 100%;
+}
+.search-btn{
+  width: 14px;
+  height: 14px;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  padding: 0;
 }

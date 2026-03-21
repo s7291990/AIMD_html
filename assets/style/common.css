@@ -151,11 +151,11 @@ button[disabled] {
 }
 
 input::placeholder {
-  color: #C4C6D1 !important;
+  color: #A5AFC9 !important;
 }
 
 textarea::placeholder {
-  color: #C4C6D1 !important;
+  color: #A5AFC9 !important;
 }
 
 button {
@@ -192,6 +192,21 @@ input[type=checkbox] {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
+}
+input[type=text]{
+  height: 32px;
+  padding: 0 15px;
+  display: inline-flex;
+  font-size: 15px;
+  font-weight: 500;
+  color: #383F51;
+  border-radius: 4px;
+  background: #EFF1F5;
+  outline: none;
+  border: 0;
+}
+input[type=text]:hover{
+  background: #DADFE9;
 }
 
 input[type=checkbox]:checked {
@@ -299,4 +314,83 @@ input[type=radio]:checked::-ms-check {
   color: transparent;
   background: url(/image/bg/bg-rd-on.svg) no-repeat;
   background-size: 24px 24px;
+}
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 15px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 700;
+  border: 0;
+}
+.btn.primary{
+  color: #fff;
+  background: #009AE1;
+}
+.btn.primary:hover{
+  background: #00B6FF;
+}
+.btn.primary:active{
+  background: #0089CC;
+}
+.btn.primary:disabled{
+  background: #EFF1F5;
+  color: #C2CADE;
+}
+.btn.secondary{
+  color: #fff;
+  background: #A3AFCB;
+}
+.btn.secondary:hover{
+  background: #BFCAE0;
+}
+.btn.secondary:active{
+  background: #7B8AAB;
+}
+.btn.secondary:disabled{
+  background: #EFF1F5;
+  color: #C2CADE;
+}
+.btn.primary-outline{
+  height: 48px;
+  color: #1C97DB;
+  font-size: 16px;
+  font-weight: 500;
+  background: #fff;
+  border: 2px solid #1C97DB;
+}
+.btn.primary-outline:hover{
+  border-color: #65C8FF;
+  color: #65C8FF;
+}
+.btn.primary-outline:hover{
+  border-color: #11699A;
+  color: #11699A;
+}
+.btn.primary-outline:disabled{
+  border-color: #DADFE9;
+  color: #DBDFE8;
+}
+.btn.error-outline{
+  height: 48px;
+  color: #E84A4A;
+  font-size: 16px;
+  font-weight: 500;
+  background: #fff;
+  border: 2px solid #E84A4A;
+}
+.btn.error-outline:hover{
+  border-color: #961C1C;
+  color: #961C1C;
+}
+.btn.error-outline:active{
+  border-color: #FF7B7B;
+  color: #FF7B7B;
+}
+.btn.error-outline:disabled{
+  border-color: #DADFE9;
+  color: #DBDFE8;
 }
