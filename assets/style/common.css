@@ -162,7 +162,7 @@ button {
   cursor: pointer;
 }
 select{
-  appearance: none;
+  appearance: none !important;
   -moz-appearance: none;
   -webkit-appearance: none;
   background: #EFF1F5 url(../image/bg/bg-select.svg) no-repeat right center !important;
@@ -207,6 +207,21 @@ input[type=text]{
   border: 0;
 }
 input[type=text]:hover{
+  background: #DADFE9;
+}
+textarea.form-control{
+  padding: 8px 15px;
+  display: inline-flex;
+  font-size: 15px;
+  font-weight: 500;
+  color: #383F51;
+  border-radius: 4px;
+  background: #EFF1F5;
+  outline: none;
+  border: 0;
+  resize: none;
+}
+textarea.form-control:hover{
   background: #DADFE9;
 }
 
@@ -395,6 +410,36 @@ input[type=radio]:checked::-ms-check {
   border-color: #DADFE9;
   color: #DBDFE8;
 }
+.btn.danger{
+  color: #fff;
+  background: #dc3545;
+}
+.btn.danger:hover{
+  background: #bb2d3b;
+}
+.btn.danger:active{
+  background: #bb2d3b;
+}
+.btn.danger:disabled{
+  background: #EFF1F5;
+  color: #C2CADE;
+}
+.btn.success{
+  color: #fff;
+  background: #198754;
+}
+.btn.success:hover{
+  background: #157347;
+}
+.btn.success:active{
+  background: #157347;
+}
+.btn.success:disabled{
+  background: #EFF1F5;
+  color: #C2CADE;
+}
+
+
 .datetimepicker{
   max-width: 176px;
   background-repeat: no-repeat !important;

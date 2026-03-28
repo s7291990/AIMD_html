@@ -171,12 +171,12 @@
               </a>
               <ul class="sub-menu">
                 <li>
-                  <a href="javascript:void(0)" class="nav-item active"
+                  <a href="javascript:void(0)" class="nav-item"
                     ><span class="text">위협평가 관리</span></a
                   >
                 </li>
                 <li>
-                  <a href="javascript:void(0)" class="nav-item"
+                  <a href="javascript:void(0)" class="nav-item active"
                     ><span class="text">타격 스케줄링 결과</span></a
                   >
                 </li>
@@ -227,27 +227,24 @@
             <div class="search-filters">
               <input
                 type="text"
-                placeholder="시작일"
-                class="form-control datepicker"
+                placeholder="시작일시"
+                class="form-control datetimepicker"
               />
               <input
                 type="text"
-                placeholder="종료일"
-                class="form-control datepicker"
+                placeholder="종료일시"
+                class="form-control datetimepicker"
               />
-              <select class="form-select">
-                <option>시나리오 ID</option>
-              </select>
-              <div class="search-input-group">
-                <input
-                  type="text"
-                  placeholder="검색어를 입력하세요"
-                  class="search-input"
-                />
-                <button class="search-btn">
-                  <img src="../../assets/image/ico/ico-search.svg" alt="검색" />
-                </button>
-              </div>
+              <input
+                type="text"
+                placeholder="시나리오 ID"
+                class="form-control normal"
+              />
+              <input
+                type="text"
+                placeholder="시퀀스 ID"
+                class="form-control normal"
+              />
             </div>
           </div>
           <div class="page-header-container">
@@ -269,238 +266,70 @@
           </div>
         </div>
 
+        <div class="attack-chart-container">
+          <div class="chart-card">
+            <div class="chart-title">예상 타격 성공률</div>
+            <div class="chart-item" id="chart01"></div>
+            <div class="chart-value">12</div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-title">예상 아군 무기</div>
+            <div class="chart-item" id="chart02"></div>
+            <div class="chart-value">12</div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-title">자산 정보</div>
+            <div class="chart-item" id="chart03"></div>
+            <div class="chart-value">12</div>
+          </div>
+        </div>
+
         <div class="page-list-container">
           <!-- Table -->
-          <div class="table-container type01">
-            <div class="table-title">자산 정보</div>
+          <div class="table-container">
             <table id="tableGrid" class="display">
               <thead class="custom-head">
                 <tr>
-                  <th>Num</th>
-                  <th>시스템 ID</th>
-                  <th>식별 표적 수</th>
-                  <th>시퀀스 Time</th>
-                  <th>위협도 전체</th>
-                  <th>실행 시간</th>
-                </tr>
-              </thead>
-            </table>
-            <script>
-              // DataTables scrollY를 "래퍼 내부에서 테이블 외 영역(위/아래) 제외" 기준으로 맞추기
-              // - 첫 번째 테이블은 아래쪽에 "위협도" 영역이 있어서 tbody 높이 계산 시 반드시 제외해야 함
-              if (typeof window.estimateScrollYBeforeInit !== "function") {
-                window.estimateScrollYBeforeInit = function (tableSelector) {
-                  var tableEl = document.querySelector(tableSelector);
-                  var wrap =
-                    tableEl && tableEl.closest
-                      ? tableEl.closest(".table-container")
-                      : null;
-                  if (!tableEl || !wrap) return "200px";
-
-                  var thead = tableEl.querySelector("thead");
-                  var theadH = thead ? thead.offsetHeight : 0;
-
-                  // 초기화 전에는 dt 컨트롤 높이를 모르므로 대략값 사용
-                  var overhead = 130;
-
-                  // 테이블 위/아래(타이틀/위협도 등) 높이 합
-                  var reservedTop = 0;
-                  for (
-                    var elTop = tableEl.previousElementSibling;
-                    elTop;
-                    elTop = elTop.previousElementSibling
-                  ) {
-                    reservedTop += elTop.offsetHeight;
-                  }
-
-                  var reservedBottom = 0;
-                  for (
-                    var elBottom = tableEl.nextElementSibling;
-                    elBottom;
-                    elBottom = elBottom.nextElementSibling
-                  ) {
-                    reservedBottom += elBottom.offsetHeight;
-                  }
-
-                  var px = Math.max(
-                    120,
-                    wrap.clientHeight -
-                      reservedTop -
-                      reservedBottom -
-                      theadH -
-                      overhead,
-                  );
-                  return px + "px";
-                };
-              }
-
-              if (typeof window.fitScrollBodyHeight !== "function") {
-                window.fitScrollBodyHeight = function (apiOrTable) {
-                  if (!apiOrTable) return;
-
-                  // DataTables API 인스턴스로 정규화
-                  var api = null;
-                  if (
-                    apiOrTable.table &&
-                    typeof apiOrTable.table === "function"
-                  ) {
-                    api = apiOrTable;
-                  } else if (
-                    apiOrTable.settings &&
-                    typeof apiOrTable.settings === "function"
-                  ) {
-                    var s = apiOrTable.settings();
-                    api = s && s[0] ? new DataTable.Api(s[0]) : null;
-                  }
-                  if (!api) return;
-
-                  var tableNode =
-                    api.table && api.table().node ? api.table().node() : null;
-                  var wrap =
-                    tableNode && tableNode.closest
-                      ? tableNode.closest(".table-container")
-                      : null;
-                  if (!wrap) return;
-
-                  var dt = wrap.querySelector(".dt-container");
-                  var body = wrap.querySelector(".dt-scroll-body");
-                  if (!dt || !body) return;
-
-                  // dt-container 위/아래(테이블 외 UI) 높이 합
-                  var reservedTop = 0;
-                  for (
-                    var elTop = dt.previousElementSibling;
-                    elTop;
-                    elTop = elTop.previousElementSibling
-                  ) {
-                    reservedTop += elTop.offsetHeight;
-                  }
-
-                  var reservedBottom = 0;
-                  for (
-                    var elBottom = dt.nextElementSibling;
-                    elBottom;
-                    elBottom = elBottom.nextElementSibling
-                  ) {
-                    reservedBottom += elBottom.offsetHeight;
-                  }
-
-                  // DT 컨트롤(상단/하단) + 스크롤 헤더 높이 합
-                  var head = wrap.querySelector(".dt-scroll-head");
-                  var headH = head ? head.offsetHeight : 0;
-
-                  var rows = dt.querySelectorAll(":scope > .dt-layout-row");
-                  var used = 0;
-                  for (var i = 0; i < rows.length; i++) {
-                    var row = rows[i];
-                    if (row.classList.contains("dt-layout-table"))
-                      used += headH;
-                    else used += row.offsetHeight;
-                  }
-
-                  var gap = 8;
-                  var h = Math.max(
-                    80,
-                    wrap.clientHeight -
-                      reservedTop -
-                      reservedBottom -
-                      used -
-                      gap,
-                  );
-                  body.style.height = h + "px";
-                  body.style.maxHeight = h + "px";
-
-                  api.columns.adjust();
-                };
-              }
-
-              var data1 = [["1", "SCN-001", "12", "01:30", "High", "05:00"]];
-
-              var scrollY = estimateScrollYBeforeInit("#tableGrid");
-              var table1 = new DataTable("#tableGrid", {
-                //ajax: '../ajax/data/arrays.txt'
-                data: data1,
-                searching: false,
-                pageLength: 20,
-                lengthMenu: [10, 20, 50, 100],
-                width: "100%", // 폭 100%로
-                responsive: true, // 화면 변화에 맞춰 재배치
-                //autoWidth: false,
-                scrollY: scrollY,
-                scrollCollapse: true,
-                language: {
-                  info: "검색 결과 <strong>_TOTAL_</strong>건 / _PAGE_페이지 선택",
-                  infoEmpty:
-                    "검색 결과 <strong>_TOTAL_</strong>건 / _PAGE_페이지 선택",
-                  infoFiltered: " (전체 _MAX_건 중)",
-                },
-                // fixedColumns: {
-                //   start: 3, // 왼쪽 3열 까지 고정
-                //   end: 0, // 오른쪽 고정 없음
-                // },
-                columnDefs: [
-                  //{ targets: 0, width: "90px" },
-                  //{ targets: 1, width: "150px" },
-                  //{ targets: 2, width: "60px" },
-                  // {
-                  //   targets: 2,
-                  //   createdCell: function (td, cellData) {
-                  //     if (cellData === "특정값") {
-                  //       td.classList.add("cell-highlight");
-                  //     }
-                  //   },
-                  // },
-                ],
-                fnInitComplete: function (settings) {
-                  var api = new DataTable.Api(settings);
-                  fitScrollBodyHeight(api, 110);
-                  requestAnimationFrame(function () {
-                    fitScrollBodyHeight(api, 110);
-                  });
-                },
-              });
-              table1.columns.adjust();
-              window.addEventListener("resize", function () {
-                fitScrollBodyHeight(table1, 110);
-              });
-            </script>
-
-            <div class="table-title">위협도</div>
-            <div class="threat-container">
-              <ul>
-                <li>안심(~25%)</li>
-                <li>경계 (–50%)</li>
-                <li>위험 (–75%)</li>
-                <li>고위험 (~100%)</li>
-              </ul>
-              <div class="bar-bg">
-                <div class="bar-item" style="width: 75%">
-                  <span>75%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Table -->
-          <div class="table-container type01">
-            <div class="table-title">위협평가 상세</div>
-            <table id="tableGrid02" class="display">
-              <thead class="custom-head">
-                <tr>
-                  <th>위협 우선 순위</th>
+                  <th>표적우선순위</th>
                   <th>순위 점수</th>
-                  <th>적군 부대</th>
+                  <th>아군 ID</th>
+                  <th>아군 무기</th>
+                  <th>아군 규모</th>
+                  <th>적군 ID</th>
                   <th>적군 무기</th>
                   <th>적군 규모</th>
+                  <th>사용 탄종</th>
+                  <th>보유 탄약</th>
+                  <th>사용 탄약</th>
+                  <th>아군-적군 <br />기본 파괴 발수</th>
+                  <th>남은 탄약</th>
                 </tr>
               </thead>
             </table>
             <script>
-              var data2 = [["1", "58.35", "CO-EN-MBT-001", "BTR40", "5대"]];
-              var scrollY = estimateScrollYBeforeInit("#tableGrid02");
-              var table2 = new DataTable("#tableGrid02", {
+              var data = [
+                [
+                  "1",
+                  "54.4",
+                  "1256",
+                  "105mm자주포",
+                  "6문",
+                  "9612",
+                  "122mm자주포",
+                  "18문",
+                  "HE",
+                  "360",
+                  "120",
+                  "134",
+                  "240",
+                ],
+              ];
+              var tableWrap = document.querySelector(".table-container");
+
+              var scrollY = estimateScrollYBeforeInit();
+              var table = new DataTable("#tableGrid", {
                 //ajax: '../ajax/data/arrays.txt'
-                data: data2,
+                data: data,
                 searching: false,
                 pageLength: 20,
                 lengthMenu: [10, 20, 50, 100],
@@ -540,9 +369,9 @@
                   });
                 },
               });
-              table2.columns.adjust();
+              table.columns.adjust();
               window.addEventListener("resize", function () {
-                fitScrollBodyHeight(table2);
+                fitScrollBodyHeight(table);
               });
             </script>
           </div>
@@ -551,5 +380,85 @@
         <!-- 컨텐츠 영역 -->
       </main>
     </div>
+
+    <!-- 차트 라이브러리 -->
+    <link
+      rel="stylesheet"
+      href="../../assets/style/billboard.css"
+      type="text/css"
+    />
+    <script
+      type="text/javascript"
+      src="../../assets/script/lib/d3.v6.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../assets/script/lib/billboard-3.8.js"
+    ></script>
+    <script>
+
+      var chartColumns01 = [
+        ["파괴", 30],
+        ["생존", 120],
+      ];
+      var color01 = ["#FFB87C", "#FF8014"];
+      donutCreate(
+        chartColumns01,
+        color01,
+        "#chart01"
+      )
+
+      var chartColumns02 = [
+        ["가용 무기", 30],
+        ["미할당 무기", 120],
+      ];
+      var color02 = ["#86A5FC", "#3268FF"];
+      donutCreate(
+        chartColumns02,
+        color02,
+        "#chart02"
+      )
+
+      var chartColumns03 = [
+        ["소모", 30],
+        ["잔여", 120],
+      ];
+      var color03 = ["#A7E8FF", "#05B6F5"];
+      donutCreate(
+        chartColumns03,
+        color03,
+        "#chart03"
+      )
+
+      function donutCreate(columns, color, id){
+        bb.generate({
+          data: {
+            columns: columns,
+            type: "donut", // for ESM specify as: donut()
+            // onclick: function(d, i) {
+            //   console.log("onclick", d, i);
+            // },
+            // onover: function(d, i) {
+            //   console.log("onover", d, i);
+            // },
+            // onout: function(d, i) {
+            //   console.log("onout", d, i);
+            // }
+          },
+          size: {
+            width: 220,
+            height: 220,
+          },
+          color: {
+            pattern: color,
+          },
+          donut: {
+            title: "",
+            width: 46,
+          },
+          bindto: id,
+        });
+      }
+    </script>
   </body>
 </html>

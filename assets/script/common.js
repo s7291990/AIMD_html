@@ -172,33 +172,34 @@ function estimateScrollYBeforeInit() {
   var px = Math.max(120, tableWrap.clientHeight - theadH - overhead);
   return px + "px";
 }
-
-function fitScrollBodyHeight(api) {
-  var wrap = document.querySelector(".table-container");
-  if (!wrap) return;
-  var dt = wrap.querySelector(".dt-container");
-  var body = wrap.querySelector(".dt-scroll-body");
-  if (!dt || !body) return;
-  var head = wrap.querySelector(".dt-scroll-head");
-  var headH = head ? head.offsetHeight : 0;
-  var rows = dt.querySelectorAll(":scope > .dt-layout-row");
-  var used = 0;
-  for (var i = 0; i < rows.length; i++) {
-    var row = rows[i];
-    if (row.classList.contains("dt-layout-table")) {
-      used += headH;
-    } else {
-      used += row.offsetHeight;
-    }
-  }
-  var gap = 8;
-  var h = Math.max(80, wrap.clientHeight - used - gap);
-  body.style.height = h + "px";
-  body.style.maxHeight = h + "px";
-  if (api && api.columns) {
-    api.columns.adjust();
-  }
-}
+//
+// function fitScrollBodyHeight(api, etc) {
+//   var wrap = document.querySelector(".table-container");
+//   if (!wrap) return;
+//   var dt = wrap.querySelector(".dt-container");
+//   var body = wrap.querySelector(".dt-scroll-body");
+//   if (!dt || !body) return;
+//   var head = wrap.querySelector(".dt-scroll-head");
+//   var headH = head ? head.offsetHeight : 0;
+//   var rows = dt.querySelectorAll(":scope > .dt-layout-row");
+//   var used = 0;
+//   for (var i = 0; i < rows.length; i++) {
+//     var row = rows[i];
+//     if (row.classList.contains("dt-layout-table")) {
+//       used += headH;
+//     } else {
+//       used += row.offsetHeight;
+//     }
+//   }
+//   var eheight = etc || 0;
+//   var gap = 8;
+//   var h = Math.max(80, wrap.clientHeight - used - gap);
+//   body.style.height = ( h - eheight ) + "px";
+//   body.style.maxHeight = ( h - eheight ) + "px";
+//   if (api && api.columns) {
+//     api.columns.adjust();
+//   }
+// }
 
 function _dtApiFrom(any) {
   if (!any) return null;
@@ -218,7 +219,7 @@ function _dtWrapFrom(apiOrTable) {
 }
 
 // 래퍼 높이에서 "테이블 위 영역(위협도 등)" + "DT 컨트롤/헤더"를 제외한 나머지를 tbody 스크롤 높이로 맞춤
-function fitScrollBodyHeight(apiOrTable) {
+function fitScrollBodyHeight(apiOrTable, etc) {
   var api = _dtApiFrom(apiOrTable) || apiOrTable;
   var wrap = _dtWrapFrom(apiOrTable);
   if (!wrap) return;
@@ -247,11 +248,11 @@ function fitScrollBodyHeight(apiOrTable) {
       used += row.offsetHeight;
     }
   }
-
+  var eheight = etc || 0;
   var gap = 8;
   var h = Math.max(80, wrap.clientHeight - reservedTop - used - gap);
-  body.style.height = h + "px";
-  body.style.maxHeight = h + "px";
+  body.style.height = (h - eheight) + "px";
+  body.style.maxHeight = (h - eheight) + "px";
 
   if (api && api.columns) {
     api.columns.adjust();

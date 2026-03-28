@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link
+      rel="stylesheet"
+      href="../../assets/style/common.css"
+      type="text/css"
+    />
+    <script
+      type="text/javascript"
+      src="../../assets/script/lib/datatables.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../assets/script/jquery-3.6.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../assets/script/jquery-ui.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../assets/script/lib/jquery-ui-timepicker-addon.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../assets/script/lib/bootstrap.min.js"
+    ></script>
+    <script type="text/javascript" src="../../assets/script/common.js"></script>
+  </head>
+
+  <body>
+    <div class="container"></div>
+
+    <!--팝업 -->
+    <div id="modal-register" class="modal-popup active">
+      <div class="modal-container large">
+        <div class="modal-header">
+          <h2>삭제</h2>
+          <button
+            type="button"
+            class="close-btn"
+            onclick="common.popClose('#modal-register')"
+          >
+            <img src="../../assets/image/ico/ico-popup-close.svg" alt="" />
+          </button>
+        </div>
+        <div class="modal-content">
+          <!-- Table -->
+          <div class="table-container auto-type">
+            <table id="tableGrid" class="display">
+              <thead class="custom-head">
+                <tr>
+                  <th>#</th>
+                  <th>column1</th>
+                  <th>column2</th>
+                  <th>column3</th>
+                  <th>column4</th>
+                  <th>column5</th>
+                  <th>column6</th>
+                </tr>
+              </thead>
+            </table>
+            <script>
+              var data = [
+                ["1", "Mark", "Otto", "@mdo", "@mdo", "@mdo", "@mdo"],
+                ["2", "Mark", "Otto", "@mdo", "@mdo", "@mdo", "@mdo"],
+              ];
+
+              var table = new DataTable("#tableGrid", {
+                //ajax: '../ajax/data/arrays.txt'
+                data: data,
+                columnDefs: [
+                  { targets: 0, width: "50px" },
+                ],
+                searching: false,
+                width: "100%", // 폭 100%로
+                responsive: false, // 화면 변화에 맞춰 재배치
+                scrollCollapse: false,
+                paging: false,
+                info: false, // 하단 "n to m of k entries" 정보 영역 숨김
+              });
+            </script>
+          </div>
+
+          <div class="modal-btn-container">
+            <button type="button" class="btn secondary">취소</button>
+            <button type="button" class="btn danger">삭제</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+  <link rel="stylesheet" href="../../assets/style/common.css" type="text/css" />
+  <script type="text/javascript" src="../../assets/script/lib/datatables.js"></script>
+  <script type="text/javascript" src="../../assets/script/jquery-3.6.1.min.js"></script>
+  <script type="text/javascript" src="../../assets/script/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../assets/script/lib/jquery-ui-timepicker-addon.min.js"></script>
+  <script type="text/javascript" src="../../assets/script/lib/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../../assets/script/common.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+  </div>
+
+  <!--팝업 -->
+  <div id="modal-register" class="modal-popup active">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h2>타격 스케줄링 결과 수정</h2>
+        <button type="button" class="close-btn" onclick="common.popClose('#modal-register')"><img src="../../assets/image/ico/ico-popup-close.svg" alt="" /></button>
+      </div>
+      <div class="modal-content">
+
+        <div class="form-container">
+          <div class="form-item-group">
+            <label>부대 명</label>
+            <input type="text" class="form-control error" />
+          </div>
+          <div class="form-item-group">
+            <label>편제형판</label>
+            <select class="form-select">
+              <option>K-9 포병중대</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-container">
+          <div class="form-item-group">
+            <label>병과 부호</label>
+            <select class="form-select">
+              <option>포병</option>
+            </select>
+          </div>
+          <div class="form-item-group">
+            <label>제대 수준</label>
+            <select class="form-select">
+              <option>대대</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-container">
+          <div class="form-item-group">
+            <label>방어 진지</label>
+            <select class="form-select">
+              <option>개할지</option>
+            </select>
+          </div>
+          <div class="form-item-group">
+            <label>정면/중심</label>
+            <select class="form-select">
+              <option>50km</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-container">
+          <div class="form-item-group">
+            <label>부대 위치</label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="form-item-group">
+            <label>장비 추가</label>
+            <select class="form-select">
+              <option>K-9</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-container">
+          <div class="form-item-group full-type">
+            <label>부대 이동</label>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+
+        <div class="modal-btn-container">
+          <button type="button" class="btn secondary">취소</button>
+          <button type="button" class="btn primary">수정</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
