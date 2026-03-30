@@ -284,3 +284,33 @@ function estimateScrollYBeforeInit(tableSelector) {
   var px = Math.max(120, wrap.clientHeight - reservedTop - theadH - overhead);
   return px + "px";
 }
+
+function donutCreate(columns, color, id) {
+  bb.generate({
+    data: {
+      columns: columns,
+      type: "donut", // for ESM specify as: donut()
+      // onclick: function(d, i) {
+      //   console.log("onclick", d, i);
+      // },
+      // onover: function(d, i) {
+      //   console.log("onover", d, i);
+      // },
+      // onout: function(d, i) {
+      //   console.log("onout", d, i);
+      // }
+    },
+    size: {
+      width: 220,
+      height: 220,
+    },
+    color: {
+      pattern: color,
+    },
+    donut: {
+      title: "",
+      width: 46,
+    },
+    bindto: id,
+  });
+}

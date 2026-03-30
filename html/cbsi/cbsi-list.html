@@ -8,31 +8,12 @@
     />
     <meta name="format-detection" content="telephone=no" />
     <title></title>
-    <link
-      rel="stylesheet"
-      href="../../assets/style/common.css"
-      type="text/css"
-    />
-    <script
-      type="text/javascript"
-      src="../../assets/script/lib/datatables.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="../../assets/script/jquery-3.6.1.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="../../assets/script/jquery-ui.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="../../assets/script/lib/jquery-ui-timepicker-addon.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="../../assets/script/lib/bootstrap.min.js"
-    ></script>
+    <link rel="stylesheet" href="../../assets/style/common.css" type="text/css" />
+    <script type="text/javascript" src="../../assets/script/lib/datatables.js"></script>
+    <script type="text/javascript" src="../../assets/script/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="../../assets/script/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../assets/script/lib/jquery-ui-timepicker-addon.min.js"></script>
+    <script type="text/javascript" src="../../assets/script/lib/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../assets/script/common.js"></script>
   </head>
 
@@ -77,7 +58,7 @@
               </ul>
             </li>
             <li>
-              <a href="javascript:void(0)" class="nav-item">
+              <a href="javascript:void(0)" class="nav-item active">
                 <span class="icon"
                   ><img src="../../assets/image/ico/ico-lnb-list01.svg" alt=""
                 /></span>
@@ -85,7 +66,7 @@
               </a>
               <ul class="sub-menu">
                 <li>
-                  <a href="javascript:void(0)" class="nav-item"
+                  <a href="javascript:void(0)" class="nav-item active"
                     ><span class="text">상황인지 결과</span></a
                   >
                 </li>
@@ -163,7 +144,7 @@
               </ul>
             </li>
             <li>
-              <a href="javascript:void(0)" class="nav-item active">
+              <a href="javascript:void(0)" class="nav-item">
                 <span class="icon"
                   ><img src="../../assets/image/ico/ico-lnb-list01.svg" alt=""
                 /></span>
@@ -176,7 +157,7 @@
                   >
                 </li>
                 <li>
-                  <a href="javascript:void(0)" class="nav-item active"
+                  <a href="javascript:void(0)" class="nav-item"
                     ><span class="text">타격 스케줄링 결과</span></a
                   >
                 </li>
@@ -225,62 +206,36 @@
         <div class="page-header">
           <div class="search-section">
             <div class="search-filters">
+
               <input
                 type="text"
-                placeholder="시작일시"
-                class="form-control datetimepicker"
+                placeholder="시작일"
+                class="form-control datepicker"
               />
               <input
                 type="text"
-                placeholder="종료일시"
-                class="form-control datetimepicker"
+                placeholder="종료일"
+                class="form-control datepicker"
               />
-              <input
-                type="text"
-                placeholder="시나리오 ID"
-                class="form-control normal"
-              />
-              <input
-                type="text"
-                placeholder="시퀀스 ID"
-                class="form-control normal"
-              />
+              <select class="form-select">
+                <option>시나리오 ID</option>
+              </select>
+              <div class="search-input-group">
+                <input
+                  type="text"
+                  placeholder="검색어를 입력하세요"
+                  class="form-control search-input"
+                />
+                <button class="search-btn"><img src="../../assets/image/ico/ico-search.svg" alt="검색" /></button>
+              </div>
             </div>
           </div>
           <div class="page-header-container">
-            <button type="button" class="icon-btn">
-              <img src="../../assets/image/ico/ico-side-search.svg" alt="" />
-            </button>
-            <button type="button" class="icon-btn">
-              <img src="../../assets/image/ico/ico-side-copy.svg" alt="" />
-            </button>
-            <button type="button" class="icon-btn">
-              <img src="../../assets/image/ico/ico-side-add.svg" alt="" />
-            </button>
-            <button type="button" class="icon-btn">
-              <img src="../../assets/image/ico/ico-side-register.svg" alt="" />
-            </button>
-            <button type="button" class="icon-btn">
-              <img src="../../assets/image/ico/ico-side-delete.svg" alt="" />
-            </button>
-          </div>
-        </div>
-
-        <div class="attack-chart-container">
-          <div class="chart-card">
-            <div class="chart-title">예상 타격 성공률</div>
-            <div class="chart-item" id="chart01"></div>
-            <div class="chart-value">12</div>
-          </div>
-          <div class="chart-card">
-            <div class="chart-title">예상 아군 무기</div>
-            <div class="chart-item" id="chart02"></div>
-            <div class="chart-value">12</div>
-          </div>
-          <div class="chart-card">
-            <div class="chart-title">자산 정보</div>
-            <div class="chart-item" id="chart03"></div>
-            <div class="chart-value">12</div>
+            <button type="button" class="icon-btn"><img src="../../assets/image/ico/ico-side-search.svg" alt="" /></button>
+            <button type="button" class="icon-btn"><img src="../../assets/image/ico/ico-side-copy.svg" alt="" /></button>
+            <button type="button" class="icon-btn"><img src="../../assets/image/ico/ico-side-add.svg" alt="" /></button>
+            <button type="button" class="icon-btn"><img src="../../assets/image/ico/ico-side-register.svg" alt="" /></button>
+            <button type="button" class="icon-btn"><img src="../../assets/image/ico/ico-side-delete.svg" alt="" /></button>
           </div>
         </div>
 
@@ -290,138 +245,27 @@
             <table id="tableGrid" class="display">
               <thead class="custom-head">
                 <tr>
-                  <th>표적우선순위</th>
-                  <th>순위 점수</th>
-                  <th>아군 ID</th>
-                  <th>아군 무기</th>
-                  <th>아군 규모</th>
-                  <th>적군 ID</th>
-                  <th>적군 무기</th>
-                  <th>적군 규모</th>
-                  <th>사용 탄종</th>
-                  <th>보유 탄약</th>
-                  <th>사용 탄약</th>
-                  <th>아군-적군 <br />기본 파괴 발수</th>
-                  <th>남은 탄약</th>
+                  <th>시나리오 ID</th>
+                  <th>음성데이터 ID</th>
+                  <th>녹음 시각</th>
+                  <th>오디오 파일/경로 URL</th>
+                  <th>시스템타임</th>
                 </tr>
               </thead>
             </table>
             <script>
-              function computeTableWrapHeight() {
-                var wrap = document.querySelector(
-                  ".page-list-container .table-container",
-                );
-                if (!wrap) return null;
-
-                var header = document.querySelector(".header");
-                var pageHeader = document.querySelector(".page-header");
-                var charts = document.querySelector(".attack-chart-container");
-
-                var used =
-                  (header ? header.offsetHeight : 0) +
-                  (pageHeader ? pageHeader.offsetHeight : 0) +
-                  (charts ? charts.offsetHeight : 0);
-
-                // page-list-container padding(20px*2) + gap 등 여유
-                var paddingAndGap = 40;
-                var h = Math.max(
-                  180,
-                  window.innerHeight - used - paddingAndGap,
-                );
-                wrap.style.height = h + "px";
-                return wrap;
-              }
-
-              function estimateScrollYBeforeInit(tableSelector) {
-                var tableEl = document.querySelector(tableSelector);
-                var wrap =
-                  tableEl && tableEl.closest
-                    ? tableEl.closest(".table-container")
-                    : null;
-                if (!tableEl || !wrap) return "200px";
-
-                var thead = tableEl.querySelector("thead");
-                var theadH = thead ? thead.offsetHeight : 0;
-
-                // 초기화 전에는 dt 컨트롤 높이를 모르므로 대략값 사용
-                var overhead = 130;
-
-                var px = Math.max(120, wrap.clientHeight - theadH - overhead);
-                return px + "px";
-              }
-
-              function fitScrollBodyHeight(apiOrTable) {
-                if (!apiOrTable) return;
-
-                // DataTables API 인스턴스로 정규화
-                var api = null;
-                if (
-                  apiOrTable.table &&
-                  typeof apiOrTable.table === "function"
-                ) {
-                  api = apiOrTable;
-                } else if (
-                  apiOrTable.settings &&
-                  typeof apiOrTable.settings === "function"
-                ) {
-                  var s = apiOrTable.settings();
-                  api = s && s[0] ? new DataTable.Api(s[0]) : null;
-                }
-                if (!api) return;
-
-                var tableNode =
-                  api.table && api.table().node ? api.table().node() : null;
-                var wrap =
-                  tableNode && tableNode.closest
-                    ? tableNode.closest(".table-container")
-                    : null;
-                if (!wrap) return;
-
-                var dt = wrap.querySelector(".dt-container");
-                var body = wrap.querySelector(".dt-scroll-body");
-                if (!dt || !body) return;
-
-                var head = wrap.querySelector(".dt-scroll-head");
-                var headH = head ? head.offsetHeight : 0;
-
-                var rows = dt.querySelectorAll(":scope > .dt-layout-row");
-                var used = 0;
-                for (var i = 0; i < rows.length; i++) {
-                  var row = rows[i];
-                  if (row.classList.contains("dt-layout-table")) used += headH;
-                  else used += row.offsetHeight;
-                }
-
-                var gap = 8;
-                var h = Math.max(80, wrap.clientHeight - used - gap);
-                body.style.height = h + "px";
-                body.style.maxHeight = h + "px";
-
-                api.columns.adjust();
-              }
-
               var data = [
                 [
-                  "1",
-                  "54.4",
-                  "1256",
-                  "105mm자주포",
-                  "6문",
-                  "9612",
-                  "122mm자주포",
-                  "18문",
-                  "HE",
-                  "360",
-                  "120",
-                  "134",
-                  "240",
+                  "ABED2345",
+                  "-",
+                  "-",
+                  "-",
+                  "-",
                 ],
               ];
-              var tableWrap =
-                computeTableWrapHeight() ||
-                document.querySelector(".table-container");
+              var tableWrap = document.querySelector(".table-container");
 
-              var scrollY = estimateScrollYBeforeInit("#tableGrid");
+              var scrollY = estimateScrollYBeforeInit();
               var table = new DataTable("#tableGrid", {
                 //ajax: '../ajax/data/arrays.txt'
                 data: data,
@@ -458,62 +302,73 @@
                 ],
                 fnInitComplete: function (settings) {
                   var api = new DataTable.Api(settings);
-                  computeTableWrapHeight();
                   fitScrollBodyHeight(api);
                   requestAnimationFrame(function () {
-                    computeTableWrapHeight();
                     fitScrollBodyHeight(api);
                   });
                 },
               });
               table.columns.adjust();
               window.addEventListener("resize", function () {
-                computeTableWrapHeight();
                 fitScrollBodyHeight(table);
               });
             </script>
+          </div>
+
+          <!-- 상세 정보-->
+          <div class="list-info-container">
+            <h3 class="info-title">상세 정보</h3>
+            <ul class="info-list">
+              <li>
+                <div class="key">음성데이터 ID</div>
+                <div class="value">-</div>
+              </li>
+              <li>
+                <div class="key">시나리오 ID</div>
+                <div class="value">-</div>
+              </li>
+              <li>
+                <div class="key">녹음 시각</div>
+                <div class="value">-</div>
+              </li>
+              <li>
+                <div class="key">오디오 파일/경로 URL</div>
+                <div class="value">-</div>
+              </li>
+              <li>
+                <div class="key">재생 길이</div>
+                <div class="value">-</div>
+              </li>
+              <li>
+                <div class="key">화자 ID</div>
+                <div class="value">-</div>
+              </li>
+              <li>
+                <div class="key">전사 텍스트</div>
+                <div class="value">-</div>
+              </li>
+              <li>
+                <div class="key">언어</div>
+                <div class="value">-</div>
+              </li>
+              <li>
+                <div class="key">인식 신뢰도 점수</div>
+                <div class="value">-</div>
+              </li>
+              <li>
+                <div class="key">추가 메타데이터</div>
+                <div class="value">-</div>
+              </li>
+              <li>
+                <div class="key">시스템타임</div>
+                <div class="value">-</div>
+              </li>
+            </ul>
           </div>
         </div>
 
         <!-- 컨텐츠 영역 -->
       </main>
     </div>
-
-    <!-- 차트 라이브러리 -->
-    <link
-      rel="stylesheet"
-      href="../../assets/style/billboard.css"
-      type="text/css"
-    />
-    <script
-      type="text/javascript"
-      src="../../assets/script/lib/d3.v6.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="../../assets/script/lib/billboard-3.8.js"
-    ></script>
-    <script>
-      var chartColumns01 = [
-        ["파괴", 30],
-        ["생존", 120],
-      ];
-      var color01 = ["#FFB87C", "#FF8014"];
-      donutCreate(chartColumns01, color01, "#chart01");
-
-      var chartColumns02 = [
-        ["가용 무기", 30],
-        ["미할당 무기", 120],
-      ];
-      var color02 = ["#86A5FC", "#3268FF"];
-      donutCreate(chartColumns02, color02, "#chart02");
-
-      var chartColumns03 = [
-        ["소모", 30],
-        ["잔여", 120],
-      ];
-      var color03 = ["#A7E8FF", "#05B6F5"];
-      donutCreate(chartColumns03, color03, "#chart03");
-    </script>
   </body>
 </html>

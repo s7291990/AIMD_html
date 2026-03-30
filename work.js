@@ -3,7 +3,7 @@ var work = [
   //{ "cate":"m01", "dep01":"로그인", "dep02":"로그인", "url":"./login/login.html", "date":"2025-08-10" },
 
   /*상황인지 추론 결과 관리(CBSI)*/
-	{ "cate":"m02", "dep01":"상황인지 결과", "dep02":"추론 결과 상세정보", "url":"./html/cbsi/cbsi-list.html", "date":"작업 대기", "cls": "error" },
+	{ "cate":"m02", "dep01":"상황인지 결과", "dep02":"추론 결과 상세정보", "url":"./html/cbsi/cbsi-list.html", "date":"2026-03-31", "cls": "" },
 	{ "cate":"m02", "dep01":"상황인지 결과", "dep02":"추론 결과 상세정보", "url":"./html/cbsi/cbsi-detail.html", "date":"2026-03-25", "cls": "" },
 
   /*위협대상 정보 관리 (SIM)*/
@@ -13,7 +13,7 @@ var work = [
   { "cate":"m03", "dep01":"영상정보", "dep02":"수정", "url":"./html/sim/sim-image-modify.html", "date":"2026-03-31", "cls": "" },
   { "cate":"m03", "dep01":"영상정보", "dep02":"삭제", "url":"./html/sim/sim-image-delete.html", "date":"2026-03-31", "cls": "" },
 
-	{ "cate":"m03", "dep01":"전문정보", "dep02":"목록", "url":"./html/sim/sim-text-list.html", "date":"작업 대기", "cls": "error"},
+	{ "cate":"m03", "dep01":"전문정보", "dep02":"목록", "url":"./html/sim/sim-text-list.html", "date":"2026-03-31", "cls": ""},
 	{ "cate":"m03", "dep01":"전문정보", "dep02":"상세 정보", "url":"./html/sim/sim-text-detail.html", "date":"2026-03-25", "cls": ""},
 	{ "cate":"m03", "dep01":"전문정보", "dep02":"추가", "url":"./html/sim/sim-text-add.html", "date":"2026-03-31", "cls": "" },
 	{ "cate":"m03", "dep01":"전문정보", "dep02":"수정", "url":"./html/sim/sim-text-modify.html", "date":"2026-03-31", "cls": "" },
@@ -48,13 +48,13 @@ var work = [
 	{ "cate":"m03", "dep01":"아군 객체정보", "dep02":"목록", "url":"./html/sim/sim-friendly-weapon-list.html", "date":"2026-03-25", "cls": ""},
 	{ "cate":"m03", "dep01":"적군 객체정보", "dep02":"목록", "url":"./html/sim/sim-enemy-weapon-list.html", "date":"2026-03-25", "cls": ""},
 
-	{ "cate":"m03", "dep01":"지형정보", "dep02":"목록", "url":"./html/sim/sim-weapon-list.html", "date":"작업 대기", "cls": "error"},
+	{ "cate":"m03", "dep01":"지형정보", "dep02":"목록", "url":"./html/sim/sim-weapon-list.html", "date":"2026-03-31", "cls": ""},
 
 	{ "cate":"m03", "dep01":"위협평가 관리", "dep02":"목록", "url":"./html/sim/sim-assessment-list.html", "date":"2026-03-25", "cls": ""},
 
 	{ "cate":"m03", "dep01":"타격 스케줄링 결과", "dep02":"목록", "url":"./html/sim/sim-attack-scheduling-list.html", "date":"2026-03-31", "cls": ""},
 
-	{ "cate":"m03", "dep01":"통계", "dep02":"멀티모달 정보통합", "url":"./html/sim/sim-statistics-list.html", "date":"작업 대기", "cls": "error"},
+	{ "cate":"m03", "dep01":"통계", "dep02":"멀티모달 정보통합", "url":"./html/sim/sim-statistics-list.html", "date":"2026-03-31", "cls": "error"},
 	{ "cate":"m03", "dep01":"보고서", "dep02":"멀티모달 정보통합", "url":"./html/sim/sim-report-list.html", "date":"작업 대기", "cls": "error"},
 	{ "cate":"m03", "dep01":"보고서", "dep02":"다운로드", "url":"./html/sim/sim-report-down.html", "date":"2026-03-31", "cls": ""},
 	{ "cate":"m03", "dep01":"보고서", "dep02":"삭제", "url":"./html/sim/sim-report-delete.html", "date":"2026-03-31", "cls": ""},
