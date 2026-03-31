@@ -298,6 +298,7 @@
   width: 100%;
   height: auto;
   overflow: hidden;
+  overflow-y: auto;
 }
 
 .header {

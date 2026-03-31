@@ -252,7 +252,10 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding: 20px 20px 0 20px;
+  padding: 20px;
+}
+.attack-chart-container + .attack-chart-container{
+  padding-top: 0;
 }
 .attack-chart-container .chart-card{
   width: 100%;
@@ -293,7 +296,7 @@
 }
 .attack-chart-container .chart-card .areaChart-item{
   width: calc( 100% - 40px );
-  height: 300px;
+  height: 260px;
   margin: 8px 30px 0 10px;
   position: relative;
   z-index: 10;
@@ -314,10 +317,82 @@
 }
 
 .item-value-container{
-  width: 100%;
+  width: calc( 100% - 40px );
+  margin: 20px auto 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding: 20px 20px 0 20px;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 0 rgba(81, 91, 116, 0.08), 0 3px 10px 0 rgba(81, 91, 116, 0.1);
+  background: #fff;
+}
+.value-card{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.value-card .card-title{
+  font-size: 15px;
+  color: #1B1F2B;
+  font-weight: 600;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+.value-card .card-box{
+  width: 100%;
+  height: 98px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #EFF1F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.value-card .card-box strong{
+  font-size: 38px;
+  color: #1B1F2B;
+  font-weight: 600;
+}
+.value-card .card-box .down{
+  padding-left: 17px;
+  transform: translate(10px, 8px);
+  font-size: 13px;
+  color: #259E55;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16px;
+  background: url(../image/ico/ico-value-down.svg) no-repeat left center;
+}
+.value-card .card-box .up{
+  padding-left: 17px;
+  transform: translate(10px, 8px);
+  font-size: 13px;
+  color: #E84A4A;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16px;
+  background: url(../image/ico/ico-value-up.svg) no-repeat left center;
+}
+.btn-search{
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #EFF1F5;
+}
+.btn-search:hover {
+  background: #DADFE9;
 }
