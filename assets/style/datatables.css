@@ -49,13 +49,13 @@ table.dataTable tfoot:empty {
 }
 
 html.dark table.dataTable td.dt-control:before,
-:root[data-bs-theme=dark] table.dataTable td.dt-control:before,
-:root[data-theme=dark] table.dataTable td.dt-control:before {
+:root[data-bs-theme="dark"] table.dataTable td.dt-control:before,
+:root[data-theme="dark"] table.dataTable td.dt-control:before {
   border-left-color: rgba(255, 255, 255, 0.5);
 }
 html.dark table.dataTable tr.dt-hasChild td.dt-control:before,
-:root[data-bs-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before,
-:root[data-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before {
+:root[data-bs-theme="dark"] table.dataTable tr.dt-hasChild td.dt-control:before,
+:root[data-theme="dark"] table.dataTable tr.dt-hasChild td.dt-control:before {
   border-top-color: rgba(255, 255, 255, 0.5);
   border-left-color: transparent;
 }
@@ -68,7 +68,8 @@ div.dt-scroll-body thead tr,
 div.dt-scroll-body tfoot tr {
   height: 0;
 }
-div.dt-scroll-body thead tr th, div.dt-scroll-body thead tr td,
+div.dt-scroll-body thead tr th,
+div.dt-scroll-body thead tr td,
 div.dt-scroll-body tfoot tr th,
 div.dt-scroll-body tfoot tr td {
   height: 0 !important;
@@ -77,7 +78,8 @@ div.dt-scroll-body tfoot tr td {
   border-top-width: 0px !important;
   border-bottom-width: 0px !important;
 }
-div.dt-scroll-body thead tr th div.dt-scroll-sizing, div.dt-scroll-body thead tr td div.dt-scroll-sizing,
+div.dt-scroll-body thead tr th div.dt-scroll-sizing,
+div.dt-scroll-body thead tr td div.dt-scroll-sizing,
 div.dt-scroll-body tfoot tr th div.dt-scroll-sizing,
 div.dt-scroll-body tfoot tr td div.dt-scroll-sizing {
   height: 0 !important;
@@ -88,7 +90,8 @@ table.dataTable thead > tr > th:active,
 table.dataTable thead > tr > td:active {
   outline: none;
 }
-table.dataTable thead > tr > th.dt-orderable-asc .dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-asc .dt-column-order:before,
+table.dataTable thead > tr > th.dt-orderable-asc .dt-column-order:before,
+table.dataTable thead > tr > th.dt-ordering-asc .dt-column-order:before,
 table.dataTable thead > tr > td.dt-orderable-asc .dt-column-order:before,
 table.dataTable thead > tr > td.dt-ordering-asc .dt-column-order:before {
   position: absolute;
@@ -97,7 +100,8 @@ table.dataTable thead > tr > td.dt-ordering-asc .dt-column-order:before {
   content: "\25B2";
   content: "\25B2"/"";
 }
-table.dataTable thead > tr > th.dt-orderable-desc .dt-column-order:after, table.dataTable thead > tr > th.dt-ordering-desc .dt-column-order:after,
+table.dataTable thead > tr > th.dt-orderable-desc .dt-column-order:after,
+table.dataTable thead > tr > th.dt-ordering-desc .dt-column-order:after,
 table.dataTable thead > tr > td.dt-orderable-desc .dt-column-order:after,
 table.dataTable thead > tr > td.dt-ordering-desc .dt-column-order:after {
   position: absolute;
@@ -106,7 +110,10 @@ table.dataTable thead > tr > td.dt-ordering-desc .dt-column-order:after {
   content: "\25BC";
   content: "\25BC"/"";
 }
-table.dataTable thead > tr > th.dt-orderable-asc .dt-column-order, table.dataTable thead > tr > th.dt-orderable-desc .dt-column-order, table.dataTable thead > tr > th.dt-ordering-asc .dt-column-order, table.dataTable thead > tr > th.dt-ordering-desc .dt-column-order,
+table.dataTable thead > tr > th.dt-orderable-asc .dt-column-order,
+table.dataTable thead > tr > th.dt-orderable-desc .dt-column-order,
+table.dataTable thead > tr > th.dt-ordering-asc .dt-column-order,
+table.dataTable thead > tr > th.dt-ordering-desc .dt-column-order,
 table.dataTable thead > tr > td.dt-orderable-asc .dt-column-order,
 table.dataTable thead > tr > td.dt-orderable-desc .dt-column-order,
 table.dataTable thead > tr > td.dt-ordering-asc .dt-column-order,
@@ -115,7 +122,14 @@ table.dataTable thead > tr > td.dt-ordering-desc .dt-column-order {
   width: 12px;
   height: 20px;
 }
-table.dataTable thead > tr > th.dt-orderable-asc .dt-column-order:before, table.dataTable thead > tr > th.dt-orderable-asc .dt-column-order:after, table.dataTable thead > tr > th.dt-orderable-desc .dt-column-order:before, table.dataTable thead > tr > th.dt-orderable-desc .dt-column-order:after, table.dataTable thead > tr > th.dt-ordering-asc .dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-asc .dt-column-order:after, table.dataTable thead > tr > th.dt-ordering-desc .dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-desc .dt-column-order:after,
+table.dataTable thead > tr > th.dt-orderable-asc .dt-column-order:before,
+table.dataTable thead > tr > th.dt-orderable-asc .dt-column-order:after,
+table.dataTable thead > tr > th.dt-orderable-desc .dt-column-order:before,
+table.dataTable thead > tr > th.dt-orderable-desc .dt-column-order:after,
+table.dataTable thead > tr > th.dt-ordering-asc .dt-column-order:before,
+table.dataTable thead > tr > th.dt-ordering-asc .dt-column-order:after,
+table.dataTable thead > tr > th.dt-ordering-desc .dt-column-order:before,
+table.dataTable thead > tr > th.dt-ordering-desc .dt-column-order:after,
 table.dataTable thead > tr > td.dt-orderable-asc .dt-column-order:before,
 table.dataTable thead > tr > td.dt-orderable-asc .dt-column-order:after,
 table.dataTable thead > tr > td.dt-orderable-desc .dt-column-order:before,
@@ -129,24 +143,37 @@ table.dataTable thead > tr > td.dt-ordering-desc .dt-column-order:after {
   line-height: 9px;
   font-size: 0.8em;
 }
-table.dataTable thead > tr > th.dt-orderable-asc, table.dataTable thead > tr > th.dt-orderable-desc,
+table.dataTable thead > tr > th.dt-orderable-asc,
+table.dataTable thead > tr > th.dt-orderable-desc,
 table.dataTable thead > tr > td.dt-orderable-asc,
 table.dataTable thead > tr > td.dt-orderable-desc {
   cursor: pointer;
 }
-table.dataTable thead > tr > th.dt-orderable-asc:hover, table.dataTable thead > tr > th.dt-orderable-desc:hover,
+table.dataTable thead > tr > th.dt-orderable-asc:hover,
+table.dataTable thead > tr > th.dt-orderable-desc:hover,
 table.dataTable thead > tr > td.dt-orderable-asc:hover,
 table.dataTable thead > tr > td.dt-orderable-desc:hover {
   outline: 2px solid rgba(0, 0, 0, 0.05);
   outline-offset: -2px;
 }
-table.dataTable thead > tr > th.dt-ordering-asc .dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-desc .dt-column-order:after,
+table.dataTable thead > tr > th.dt-ordering-asc .dt-column-order:before,
+table.dataTable thead > tr > th.dt-ordering-desc .dt-column-order:after,
 table.dataTable thead > tr > td.dt-ordering-asc .dt-column-order:before,
 table.dataTable thead > tr > td.dt-ordering-desc .dt-column-order:after {
   opacity: 0.6;
 }
-table.dataTable thead > tr > th.dt-orderable-none:not(.dt-ordering-asc, .dt-ordering-desc) .dt-column-order:empty, table.dataTable thead > tr > th.sorting_desc_disabled .dt-column-order:after, table.dataTable thead > tr > th.sorting_asc_disabled .dt-column-order:before,
-table.dataTable thead > tr > td.dt-orderable-none:not(.dt-ordering-asc, .dt-ordering-desc) .dt-column-order:empty,
+table.dataTable
+  thead
+  > tr
+  > th.dt-orderable-none:not(.dt-ordering-asc, .dt-ordering-desc)
+  .dt-column-order:empty,
+table.dataTable thead > tr > th.sorting_desc_disabled .dt-column-order:after,
+table.dataTable thead > tr > th.sorting_asc_disabled .dt-column-order:before,
+table.dataTable
+  thead
+  > tr
+  > td.dt-orderable-none:not(.dt-ordering-asc, .dt-ordering-desc)
+  .dt-column-order:empty,
 table.dataTable thead > tr > td.sorting_desc_disabled .dt-column-order:after,
 table.dataTable thead > tr > td.sorting_asc_disabled .dt-column-order:before {
   display: none;
@@ -195,13 +222,30 @@ div.dt-scroll-body > table.dataTable > thead > tr > td {
   overflow: hidden;
 }
 
-:root.dark table.dataTable thead > tr > th.dt-orderable-asc:hover, :root.dark table.dataTable thead > tr > th.dt-orderable-desc:hover,
+:root.dark table.dataTable thead > tr > th.dt-orderable-asc:hover,
+:root.dark table.dataTable thead > tr > th.dt-orderable-desc:hover,
 :root.dark table.dataTable thead > tr > td.dt-orderable-asc:hover,
 :root.dark table.dataTable thead > tr > td.dt-orderable-desc:hover,
-:root[data-bs-theme=dark] table.dataTable thead > tr > th.dt-orderable-asc:hover,
-:root[data-bs-theme=dark] table.dataTable thead > tr > th.dt-orderable-desc:hover,
-:root[data-bs-theme=dark] table.dataTable thead > tr > td.dt-orderable-asc:hover,
-:root[data-bs-theme=dark] table.dataTable thead > tr > td.dt-orderable-desc:hover {
+:root[data-bs-theme="dark"]
+  table.dataTable
+  thead
+  > tr
+  > th.dt-orderable-asc:hover,
+:root[data-bs-theme="dark"]
+  table.dataTable
+  thead
+  > tr
+  > th.dt-orderable-desc:hover,
+:root[data-bs-theme="dark"]
+  table.dataTable
+  thead
+  > tr
+  > td.dt-orderable-asc:hover,
+:root[data-bs-theme="dark"]
+  table.dataTable
+  thead
+  > tr
+  > td.dt-orderable-desc:hover {
   outline: 2px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -273,20 +317,22 @@ div.dt-processing > div:last-child > div:nth-child(4) {
     transform: translate(24px, 0);
   }
 }
-table.dataTable.nowrap th, table.dataTable.nowrap td {
+table.dataTable.nowrap th,
+table.dataTable.nowrap td {
   white-space: nowrap;
 }
 table.dataTable th,
 table.dataTable td {
   box-sizing: border-box;
 }
-table.dataTable th.dt-type-numeric, table.dataTable th.dt-type-date,
+table.dataTable th.dt-type-numeric,
+table.dataTable th.dt-type-date,
 table.dataTable td.dt-type-numeric,
 table.dataTable td.dt-type-date {
-
 }
 table.dataTable th.dt-type-numeric div.dt-column-header,
-table.dataTable th.dt-type-numeric div.dt-column-footer, table.dataTable th.dt-type-date div.dt-column-header,
+table.dataTable th.dt-type-numeric div.dt-column-footer,
+table.dataTable th.dt-type-date div.dt-column-header,
 table.dataTable th.dt-type-date div.dt-column-footer,
 table.dataTable td.dt-type-numeric div.dt-column-header,
 table.dataTable td.dt-type-numeric div.dt-column-footer,
@@ -475,11 +521,19 @@ table.dataTable > tbody > tr:first-child > * {
 table.dataTable > tbody > tr:last-child > * {
   border-bottom: none;
 }
-table.dataTable > tbody > tr.selected > * {
-  box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.9);
+table.dataTable > tbody > tr:hover > * {
+  /* box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.9);
   box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-selected), 0.9);
   color: rgb(255, 255, 255);
-  color: rgb(var(--dt-row-selected-text));
+  color: rgb(var(--dt-row-selected-text)); */
+  background: #e4f3fb;
+}
+table.dataTable > tbody > tr.selected > * {
+  /* box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.9);
+  box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-selected), 0.9);
+  color: rgb(255, 255, 255);
+  color: rgb(var(--dt-row-selected-text)); */
+  background: #e4f3fb;
 }
 table.dataTable > tbody > tr.selected a {
   color: rgb(228, 228, 228);
@@ -489,22 +543,25 @@ table.dataTable > tbody > tr > th,
 table.dataTable > tbody > tr > td {
   padding: 8px 10px;
   font-size: 15px;
-  color: #383F51;
+  color: #383f51;
   font-weight: 500;
   text-align: center;
-  border: 1px solid #DADFE9 !important;
+  border: 1px solid #dadfe9 !important;
 }
-table.dataTable > tbody > tr > td.col-left{
+table.dataTable > tbody > tr > td.col-left {
   text-align: left;
-  background: #EFF1F5;
+  background: #eff1f5;
 }
-table.dataTable.row-border > tbody > tr > *, table.dataTable.display > tbody > tr > * {
+table.dataTable.row-border > tbody > tr > *,
+table.dataTable.display > tbody > tr > * {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
-table.dataTable.row-border > tbody > tr:first-child > *, table.dataTable.display > tbody > tr:first-child > * {
+table.dataTable.row-border > tbody > tr:first-child > *,
+table.dataTable.display > tbody > tr:first-child > * {
   border-top: none;
 }
-table.dataTable.row-border > tbody > tr.selected + tr.selected > td, table.dataTable.display > tbody > tr.selected + tr.selected > td {
+table.dataTable.row-border > tbody > tr.selected + tr.selected > td,
+table.dataTable.display > tbody > tr.selected + tr.selected > td {
   border-top-color: rgba(13, 110, 253, 0.65);
   border-top-color: rgba(var(--dt-row-selected), 0.65);
 }
@@ -518,25 +575,32 @@ table.dataTable.cell-border > tbody > tr > *:first-child {
 table.dataTable.cell-border > tbody > tr:first-child > * {
   border-top: 1px solid rgba(0, 0, 0, 0.3);
 }
-table.dataTable.stripe > tbody > tr:nth-child(odd) > *, table.dataTable.display > tbody > tr:nth-child(odd) > * {
+table.dataTable.stripe > tbody > tr:nth-child(odd) > *,
+table.dataTable.display > tbody > tr:nth-child(odd) > * {
   /*box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.023);*/
   /*box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-stripe), var(--dt-row-stripe-alpha));*/
 }
-table.dataTable.stripe > tbody > tr:nth-child(odd).selected > *, table.dataTable.display > tbody > tr:nth-child(odd).selected > * {
-  box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.923);
-  box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-selected), var(--dt-row-selected-stripe-alpha));
+table.dataTable.stripe > tbody > tr:nth-child(odd).selected > *,
+table.dataTable.display > tbody > tr:nth-child(odd).selected > * {
+  /* box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.923);
+  box-shadow: inset 0 0 0 9999px
+    rgba(var(--dt-row-selected), var(--dt-row-selected-stripe-alpha)); */
 }
-table.dataTable.hover > tbody > tr:hover > *, table.dataTable.display > tbody > tr:hover > * {
-  box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.035);
-  box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-hover), var(--dt-row-hover-alpha));
+table.dataTable.hover > tbody > tr:hover > *,
+table.dataTable.display > tbody > tr:hover > * {
+  /* box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.035);
+  box-shadow: inset 0 0 0 9999px
+    rgba(var(--dt-row-hover), var(--dt-row-hover-alpha)); */
 }
-table.dataTable.hover > tbody > tr.selected:hover > *, table.dataTable.display > tbody > tr.selected:hover > * {
-  box-shadow: inset 0 0 0 9999px #0d6efd !important;
-  box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-selected), 1) !important;
+table.dataTable.hover > tbody > tr.selected:hover > *,
+table.dataTable.display > tbody > tr.selected:hover > * {
+  /* box-shadow: inset 0 0 0 9999px #0d6efd !important;
+  box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-selected), 1) !important; */
 }
 table.dataTable.order-column > tbody tr > .sorting_1,
 table.dataTable.order-column > tbody tr > .sorting_2,
-table.dataTable.order-column > tbody tr > .sorting_3, table.dataTable.display > tbody tr > .sorting_1,
+table.dataTable.order-column > tbody tr > .sorting_3,
+table.dataTable.display > tbody tr > .sorting_1,
 table.dataTable.display > tbody tr > .sorting_2,
 table.dataTable.display > tbody tr > .sorting_3 {
   /*box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.019);*/
@@ -544,59 +608,151 @@ table.dataTable.display > tbody tr > .sorting_3 {
 }
 table.dataTable.order-column > tbody tr.selected > .sorting_1,
 table.dataTable.order-column > tbody tr.selected > .sorting_2,
-table.dataTable.order-column > tbody tr.selected > .sorting_3, table.dataTable.display > tbody tr.selected > .sorting_1,
+table.dataTable.order-column > tbody tr.selected > .sorting_3,
+table.dataTable.display > tbody tr.selected > .sorting_1,
 table.dataTable.display > tbody tr.selected > .sorting_2,
 table.dataTable.display > tbody tr.selected > .sorting_3 {
-  box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.919);
-  box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-selected), var(--dt-row-selected-column-ordering-alpha));
+  /* box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.919);
+  box-shadow: inset 0 0 0 9999px
+    rgba(var(--dt-row-selected), var(--dt-row-selected-column-ordering-alpha)); */
 }
-table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTable.order-column.stripe > tbody > tr:nth-child(odd) > .sorting_1 {
+table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1,
+table.dataTable.order-column.stripe > tbody > tr:nth-child(odd) > .sorting_1 {
   /*box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.054);*/
   /*box-shadow: inset 0 0 0 9999px rgba(var(--dt-column-ordering), calc(var(--dt-row-stripe-alpha) + var(--dt-column-ordering-alpha)));*/
 }
-table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_2, table.dataTable.order-column.stripe > tbody > tr:nth-child(odd) > .sorting_2 {
-  box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.047);
-  box-shadow: inset 0 0 0 9999px rgba(var(--dt-column-ordering), calc(var(--dt-row-stripe-alpha) + var(--dt-column-ordering-alpha) - 0.007));
+table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_2,
+table.dataTable.order-column.stripe > tbody > tr:nth-child(odd) > .sorting_2 {
+  /* box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.047);
+  box-shadow: inset 0 0 0 9999px
+    rgba(
+      var(--dt-column-ordering),
+      calc(var(--dt-row-stripe-alpha) + var(--dt-column-ordering-alpha) - 0.007)
+    ); */
 }
-table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_3, table.dataTable.order-column.stripe > tbody > tr:nth-child(odd) > .sorting_3 {
-  box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.039);
-  box-shadow: inset 0 0 0 9999px rgba(var(--dt-column-ordering), calc(var(--dt-row-stripe-alpha) + var(--dt-column-ordering-alpha) - 0.015));
+table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_3,
+table.dataTable.order-column.stripe > tbody > tr:nth-child(odd) > .sorting_3 {
+  /* box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.039);
+  box-shadow: inset 0 0 0 9999px
+    rgba(
+      var(--dt-column-ordering),
+      calc(var(--dt-row-stripe-alpha) + var(--dt-column-ordering-alpha) - 0.015)
+    ); */
 }
-table.dataTable.display > tbody > tr:nth-child(odd).selected > .sorting_1, table.dataTable.order-column.stripe > tbody > tr:nth-child(odd).selected > .sorting_1 {
-  box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.954);
-  box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-selected), calc(var(--dt-row-selected-stripe-alpha) + var(--dt-column-ordering-alpha)));
+table.dataTable.display > tbody > tr:nth-child(odd).selected > .sorting_1,
+table.dataTable.order-column.stripe
+  > tbody
+  > tr:nth-child(odd).selected
+  > .sorting_1 {
+  /* box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.954);
+  box-shadow: inset 0 0 0 9999px
+    rgba(
+      var(--dt-row-selected),
+      calc(
+        var(--dt-row-selected-stripe-alpha) + var(--dt-column-ordering-alpha)
+      )
+    ); */
 }
-table.dataTable.display > tbody > tr:nth-child(odd).selected > .sorting_2, table.dataTable.order-column.stripe > tbody > tr:nth-child(odd).selected > .sorting_2 {
-  box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.947);
-  box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-selected), calc(var(--dt-row-selected-stripe-alpha) + var(--dt-column-ordering-alpha) - 0.007));
+table.dataTable.display > tbody > tr:nth-child(odd).selected > .sorting_2,
+table.dataTable.order-column.stripe
+  > tbody
+  > tr:nth-child(odd).selected
+  > .sorting_2 {
+  /* box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.947);
+  box-shadow: inset 0 0 0 9999px
+    rgba(
+      var(--dt-row-selected),
+      calc(
+        var(--dt-row-selected-stripe-alpha) + var(--dt-column-ordering-alpha) -
+          0.007
+      )
+    ); */
 }
-table.dataTable.display > tbody > tr:nth-child(odd).selected > .sorting_3, table.dataTable.order-column.stripe > tbody > tr:nth-child(odd).selected > .sorting_3 {
-  box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.939);
-  box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-selected), calc(var(--dt-row-selected-stripe-alpha) + var(--dt-column-ordering-alpha) - 0.015));
+table.dataTable.display > tbody > tr:nth-child(odd).selected > .sorting_3,
+table.dataTable.order-column.stripe
+  > tbody
+  > tr:nth-child(odd).selected
+  > .sorting_3 {
+  /* box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.939);
+  box-shadow: inset 0 0 0 9999px
+    rgba(
+      var(--dt-row-selected),
+      calc(
+        var(--dt-row-selected-stripe-alpha) + var(--dt-column-ordering-alpha) -
+          0.015
+      )
+    ); */
 }
-table.dataTable.display tbody tr:hover > .sorting_1, table.dataTable.order-column.hover tbody tr:hover > .sorting_1 {
-  box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.082);
-  box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-hover), calc(var(--dt-row-stripe-alpha) + var(--dt-column-ordering-alpha) + var(--dt-row-hover-alpha)));
+table.dataTable.display tbody tr:hover > .sorting_1,
+table.dataTable.order-column.hover tbody tr:hover > .sorting_1 {
+  /* box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.082);
+  box-shadow: inset 0 0 0 9999px
+    rgba(
+      var(--dt-row-hover),
+      calc(
+        var(--dt-row-stripe-alpha) + var(--dt-column-ordering-alpha) +
+          var(--dt-row-hover-alpha)
+      )
+    ); */
 }
-table.dataTable.display tbody tr:hover > .sorting_2, table.dataTable.order-column.hover tbody tr:hover > .sorting_2 {
-  box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.074);
-  box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-hover), calc(var(--dt-row-stripe-alpha) + var(--dt-column-ordering-alpha) + var(--dt-row-hover-alpha) - 0.007));
+table.dataTable.display tbody tr:hover > .sorting_2,
+table.dataTable.order-column.hover tbody tr:hover > .sorting_2 {
+  /* box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.074);
+  box-shadow: inset 0 0 0 9999px
+    rgba(
+      var(--dt-row-hover),
+      calc(
+        var(--dt-row-stripe-alpha) + var(--dt-column-ordering-alpha) +
+          var(--dt-row-hover-alpha) - 0.007
+      )
+    ); */
 }
-table.dataTable.display tbody tr:hover > .sorting_3, table.dataTable.order-column.hover tbody tr:hover > .sorting_3 {
-  box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.062);
-  box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-hover), calc(var(--dt-row-stripe-alpha) + var(--dt-column-ordering-alpha) + var(--dt-row-hover-alpha) - 0.015));
+table.dataTable.display tbody tr:hover > .sorting_3,
+table.dataTable.order-column.hover tbody tr:hover > .sorting_3 {
+  /* box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.062);
+  box-shadow: inset 0 0 0 9999px
+    rgba(
+      var(--dt-row-hover),
+      calc(
+        var(--dt-row-stripe-alpha) + var(--dt-column-ordering-alpha) +
+          var(--dt-row-hover-alpha) - 0.015
+      )
+    ); */
 }
-table.dataTable.display tbody tr:hover.selected > .sorting_1, table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_1 {
-  box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.982);
-  box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-selected), calc(var(--dt-row-selected-stripe-alpha) + var(--dt-column-ordering-alpha)));
+table.dataTable.display tbody tr:hover.selected > .sorting_1,
+table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_1 {
+  /* box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.982);
+  box-shadow: inset 0 0 0 9999px
+    rgba(
+      var(--dt-row-selected),
+      calc(
+        var(--dt-row-selected-stripe-alpha) + var(--dt-column-ordering-alpha)
+      )
+    ); */
 }
-table.dataTable.display tbody tr:hover.selected > .sorting_2, table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_2 {
-  box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.974);
-  box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-selected), calc(var(--dt-row-selected-stripe-alpha) + var(--dt-column-ordering-alpha) + var(--dt-row-hover-alpha) - 0.007));
+table.dataTable.display tbody tr:hover.selected > .sorting_2,
+table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_2 {
+  /* box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.974);
+  box-shadow: inset 0 0 0 9999px
+    rgba(
+      var(--dt-row-selected),
+      calc(
+        var(--dt-row-selected-stripe-alpha) + var(--dt-column-ordering-alpha) +
+          var(--dt-row-hover-alpha) - 0.007
+      )
+    ); */
 }
-table.dataTable.display tbody tr:hover.selected > .sorting_3, table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_3 {
-  box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.962);
-  box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-selected), calc(var(--dt-row-selected-stripe-alpha) + var(--dt-column-ordering-alpha) + var(--dt-row-hover-alpha) - 0.015));
+table.dataTable.display tbody tr:hover.selected > .sorting_3,
+table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_3 {
+  /* box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.962);
+  box-shadow: inset 0 0 0 9999px
+    rgba(
+      var(--dt-row-selected),
+      calc(
+        var(--dt-row-selected-stripe-alpha) + var(--dt-column-ordering-alpha) +
+          var(--dt-row-hover-alpha) - 0.015
+      )
+    ); */
 }
 table.dataTable.compact thead th,
 table.dataTable.compact thead td,
@@ -639,13 +795,20 @@ div.dt-container div.dt-layout-row div.dt-layout-cell:empty {
     display: block;
     text-align: center;
   }
-  div.dt-container div.dt-layout-row:not(.dt-layout-table) div.dt-layout-cell > * {
+  div.dt-container
+    div.dt-layout-row:not(.dt-layout-table)
+    div.dt-layout-cell
+    > * {
     margin: 0.5em 0;
   }
-  div.dt-container div.dt-layout-row:not(.dt-layout-table) div.dt-layout-cell.dt-layout-start {
+  div.dt-container
+    div.dt-layout-row:not(.dt-layout-table)
+    div.dt-layout-cell.dt-layout-start {
     margin-right: 0;
   }
-  div.dt-container div.dt-layout-row:not(.dt-layout-table) div.dt-layout-cell.dt-layout-end {
+  div.dt-container
+    div.dt-layout-row:not(.dt-layout-table)
+    div.dt-layout-cell.dt-layout-end {
     margin-left: 0;
   }
 }
@@ -713,18 +876,47 @@ div.dt-container .dt-paging .dt-paging-button {
   border-radius: 2px;
   background: transparent;
 }
-div.dt-container .dt-paging .dt-paging-button.current, div.dt-container .dt-paging .dt-paging-button.current:hover {
+div.dt-container .dt-paging .dt-paging-button.current,
+div.dt-container .dt-paging .dt-paging-button.current:hover {
   color: inherit !important;
   border: 1px solid rgba(0, 0, 0, 0.3);
   background-color: rgba(0, 0, 0, 0.05);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(229.5, 229.5, 229.5, 0.05)), color-stop(100%, rgba(0, 0, 0, 0.05))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(229.5, 229.5, 229.5, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%); /* Chrome10+,Safari5.1+ */
-  background: -moz-linear-gradient(top, rgba(229.5, 229.5, 229.5, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%); /* FF3.6+ */
-  background: -ms-linear-gradient(top, rgba(229.5, 229.5, 229.5, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%); /* IE10+ */
-  background: -o-linear-gradient(top, rgba(229.5, 229.5, 229.5, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%); /* Opera 11.10+ */
-  background: linear-gradient(to bottom, rgba(229.5, 229.5, 229.5, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%); /* W3C */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, rgba(229.5, 229.5, 229.5, 0.05)),
+    color-stop(100%, rgba(0, 0, 0, 0.05))
+  ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(229.5, 229.5, 229.5, 0.05) 0%,
+    rgba(0, 0, 0, 0.05) 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(
+    top,
+    rgba(229.5, 229.5, 229.5, 0.05) 0%,
+    rgba(0, 0, 0, 0.05) 100%
+  ); /* FF3.6+ */
+  background: -ms-linear-gradient(
+    top,
+    rgba(229.5, 229.5, 229.5, 0.05) 0%,
+    rgba(0, 0, 0, 0.05) 100%
+  ); /* IE10+ */
+  background: -o-linear-gradient(
+    top,
+    rgba(229.5, 229.5, 229.5, 0.05) 0%,
+    rgba(0, 0, 0, 0.05) 100%
+  ); /* Opera 11.10+ */
+  background: linear-gradient(
+    to bottom,
+    rgba(229.5, 229.5, 229.5, 0.05) 0%,
+    rgba(0, 0, 0, 0.05) 100%
+  ); /* W3C */
 }
-div.dt-container .dt-paging .dt-paging-button.disabled, div.dt-container .dt-paging .dt-paging-button.disabled:hover, div.dt-container .dt-paging .dt-paging-button.disabled:active {
+div.dt-container .dt-paging .dt-paging-button.disabled,
+div.dt-container .dt-paging .dt-paging-button.disabled:hover,
+div.dt-container .dt-paging .dt-paging-button.disabled:active {
   cursor: default;
   color: rgba(0, 0, 0, 0.5) !important;
   border: 1px solid transparent;
@@ -735,22 +927,74 @@ div.dt-container .dt-paging .dt-paging-button:hover {
   color: white !important;
   border: 1px solid #111;
   background-color: #111;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(88.4, 88.4, 88.4)), color-stop(100%, #111)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgb(88.4, 88.4, 88.4) 0%, #111 100%); /* Chrome10+,Safari5.1+ */
-  background: -moz-linear-gradient(top, rgb(88.4, 88.4, 88.4) 0%, #111 100%); /* FF3.6+ */
-  background: -ms-linear-gradient(top, rgb(88.4, 88.4, 88.4) 0%, #111 100%); /* IE10+ */
-  background: -o-linear-gradient(top, rgb(88.4, 88.4, 88.4) 0%, #111 100%); /* Opera 11.10+ */
-  background: linear-gradient(to bottom, rgb(88.4, 88.4, 88.4) 0%, #111 100%); /* W3C */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, rgb(88.4, 88.4, 88.4)),
+    color-stop(100%, #111)
+  ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    top,
+    rgb(88.4, 88.4, 88.4) 0%,
+    #111 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(
+    top,
+    rgb(88.4, 88.4, 88.4) 0%,
+    #111 100%
+  ); /* FF3.6+ */
+  background: -ms-linear-gradient(
+    top,
+    rgb(88.4, 88.4, 88.4) 0%,
+    #111 100%
+  ); /* IE10+ */
+  background: -o-linear-gradient(
+    top,
+    rgb(88.4, 88.4, 88.4) 0%,
+    #111 100%
+  ); /* Opera 11.10+ */
+  background: linear-gradient(
+    to bottom,
+    rgb(88.4, 88.4, 88.4) 0%,
+    #111 100%
+  ); /* W3C */
 }
 div.dt-container .dt-paging .dt-paging-button:active {
   outline: none;
   background-color: rgb(11.9, 11.9, 11.9);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(42.5, 42.5, 42.5)), color-stop(100%, rgb(11.9, 11.9, 11.9))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgb(42.5, 42.5, 42.5) 0%, rgb(11.9, 11.9, 11.9) 100%); /* Chrome10+,Safari5.1+ */
-  background: -moz-linear-gradient(top, rgb(42.5, 42.5, 42.5) 0%, rgb(11.9, 11.9, 11.9) 100%); /* FF3.6+ */
-  background: -ms-linear-gradient(top, rgb(42.5, 42.5, 42.5) 0%, rgb(11.9, 11.9, 11.9) 100%); /* IE10+ */
-  background: -o-linear-gradient(top, rgb(42.5, 42.5, 42.5) 0%, rgb(11.9, 11.9, 11.9) 100%); /* Opera 11.10+ */
-  background: linear-gradient(to bottom, rgb(42.5, 42.5, 42.5) 0%, rgb(11.9, 11.9, 11.9) 100%); /* W3C */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, rgb(42.5, 42.5, 42.5)),
+    color-stop(100%, rgb(11.9, 11.9, 11.9))
+  ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    top,
+    rgb(42.5, 42.5, 42.5) 0%,
+    rgb(11.9, 11.9, 11.9) 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(
+    top,
+    rgb(42.5, 42.5, 42.5) 0%,
+    rgb(11.9, 11.9, 11.9) 100%
+  ); /* FF3.6+ */
+  background: -ms-linear-gradient(
+    top,
+    rgb(42.5, 42.5, 42.5) 0%,
+    rgb(11.9, 11.9, 11.9) 100%
+  ); /* IE10+ */
+  background: -o-linear-gradient(
+    top,
+    rgb(42.5, 42.5, 42.5) 0%,
+    rgb(11.9, 11.9, 11.9) 100%
+  ); /* Opera 11.10+ */
+  background: linear-gradient(
+    to bottom,
+    rgb(42.5, 42.5, 42.5) 0%,
+    rgb(11.9, 11.9, 11.9) 100%
+  ); /* W3C */
   box-shadow: inset 0 0 3px #111;
 }
 div.dt-container .dt-paging .ellipsis {
@@ -769,12 +1013,68 @@ div.dt-container .dataTables_scroll {
 div.dt-container .dataTables_scroll div.dt-scroll-body {
   -webkit-overflow-scrolling: touch;
 }
-div.dt-container .dataTables_scroll div.dt-scroll-body > table > thead > tr > th, div.dt-container .dataTables_scroll div.dt-scroll-body > table > thead > tr > td, div.dt-container .dataTables_scroll div.dt-scroll-body > table > tbody > tr > th, div.dt-container .dataTables_scroll div.dt-scroll-body > table > tbody > tr > td {
+div.dt-container
+  .dataTables_scroll
+  div.dt-scroll-body
+  > table
+  > thead
+  > tr
+  > th,
+div.dt-container
+  .dataTables_scroll
+  div.dt-scroll-body
+  > table
+  > thead
+  > tr
+  > td,
+div.dt-container
+  .dataTables_scroll
+  div.dt-scroll-body
+  > table
+  > tbody
+  > tr
+  > th,
+div.dt-container
+  .dataTables_scroll
+  div.dt-scroll-body
+  > table
+  > tbody
+  > tr
+  > td {
   vertical-align: middle;
 }
-div.dt-container .dataTables_scroll div.dt-scroll-body > table > thead > tr > th > div.dataTables_sizing,
-div.dt-container .dataTables_scroll div.dt-scroll-body > table > thead > tr > td > div.dataTables_sizing, div.dt-container .dataTables_scroll div.dt-scroll-body > table > tbody > tr > th > div.dataTables_sizing,
-div.dt-container .dataTables_scroll div.dt-scroll-body > table > tbody > tr > td > div.dataTables_sizing {
+div.dt-container
+  .dataTables_scroll
+  div.dt-scroll-body
+  > table
+  > thead
+  > tr
+  > th
+  > div.dataTables_sizing,
+div.dt-container
+  .dataTables_scroll
+  div.dt-scroll-body
+  > table
+  > thead
+  > tr
+  > td
+  > div.dataTables_sizing,
+div.dt-container
+  .dataTables_scroll
+  div.dt-scroll-body
+  > table
+  > tbody
+  > tr
+  > th
+  > div.dataTables_sizing,
+div.dt-container
+  .dataTables_scroll
+  div.dt-scroll-body
+  > table
+  > tbody
+  > tr
+  > td
+  > div.dataTables_sizing {
   height: 0;
   overflow: hidden;
   margin: 0 !important;
@@ -799,13 +1099,16 @@ html.dark table.dataTable > thead > tr > th:active,
 html.dark table.dataTable > thead > tr > td:active {
   outline: none;
 }
-html.dark table.dataTable.row-border > tbody > tr > *, html.dark table.dataTable.display > tbody > tr > * {
+html.dark table.dataTable.row-border > tbody > tr > *,
+html.dark table.dataTable.display > tbody > tr > * {
   border-top: 1px solid rgb(64, 67, 70);
 }
-html.dark table.dataTable.row-border > tbody > tr:first-child > *, html.dark table.dataTable.display > tbody > tr:first-child > * {
+html.dark table.dataTable.row-border > tbody > tr:first-child > *,
+html.dark table.dataTable.display > tbody > tr:first-child > * {
   border-top: none;
 }
-html.dark table.dataTable.row-border > tbody > tr.selected + tr.selected > td, html.dark table.dataTable.display > tbody > tr.selected + tr.selected > td {
+html.dark table.dataTable.row-border > tbody > tr.selected + tr.selected > td,
+html.dark table.dataTable.display > tbody > tr.selected + tr.selected > td {
   border-top-color: rgba(13, 110, 253, 0.65);
   border-top-color: rgba(var(--dt-row-selected), 0.65);
 }
@@ -826,11 +1129,14 @@ html.dark .dt-container .dt-length select {
   border: 1px solid rgba(255, 255, 255, 0.2);
   background-color: var(--dt-html-background);
 }
-html.dark .dt-container .dt-paging .dt-paging-button.current, html.dark .dt-container .dt-paging .dt-paging-button.current:hover {
+html.dark .dt-container .dt-paging .dt-paging-button.current,
+html.dark .dt-container .dt-paging .dt-paging-button.current:hover {
   border: 1px solid rgb(89, 91, 94);
   background: rgba(255, 255, 255, 0.15);
 }
-html.dark .dt-container .dt-paging .dt-paging-button.disabled, html.dark .dt-container .dt-paging .dt-paging-button.disabled:hover, html.dark .dt-container .dt-paging .dt-paging-button.disabled:active {
+html.dark .dt-container .dt-paging .dt-paging-button.disabled,
+html.dark .dt-container .dt-paging .dt-paging-button.disabled:hover,
+html.dark .dt-container .dt-paging .dt-paging-button.disabled:active {
   color: #666 !important;
 }
 html.dark .dt-container .dt-paging .dt-paging-button:hover {
@@ -844,24 +1150,25 @@ html.dark .dt-container .dt-paging .dt-paging-button:active {
 /*
  * Overrides for RTL support
  */
-*[dir=rtl] table.dataTable thead th,
-*[dir=rtl] table.dataTable thead td,
-*[dir=rtl] table.dataTable tfoot th,
-*[dir=rtl] table.dataTable tfoot td {
+*[dir="rtl"] table.dataTable thead th,
+*[dir="rtl"] table.dataTable thead td,
+*[dir="rtl"] table.dataTable tfoot th,
+*[dir="rtl"] table.dataTable tfoot td {
   text-align: right;
 }
-*[dir=rtl] table.dataTable th.dt-type-numeric, *[dir=rtl] table.dataTable th.dt-type-date,
-*[dir=rtl] table.dataTable td.dt-type-numeric,
-*[dir=rtl] table.dataTable td.dt-type-date {
+*[dir="rtl"] table.dataTable th.dt-type-numeric,
+*[dir="rtl"] table.dataTable th.dt-type-date,
+*[dir="rtl"] table.dataTable td.dt-type-numeric,
+*[dir="rtl"] table.dataTable td.dt-type-date {
   text-align: left;
 }
-*[dir=rtl] div.dt-container div.dt-layout-cell.dt-start {
+*[dir="rtl"] div.dt-container div.dt-layout-cell.dt-start {
   text-align: right;
 }
-*[dir=rtl] div.dt-container div.dt-layout-cell.dt-end {
+*[dir="rtl"] div.dt-container div.dt-layout-cell.dt-end {
   text-align: left;
 }
-*[dir=rtl] div.dt-container div.dt-search input {
+*[dir="rtl"] div.dt-container div.dt-search input {
   margin: 0 3px 0 0;
 }
 
@@ -929,7 +1236,6 @@ div.dt-container .dt-paging {
   color: inherit;
 }
 
-
 div.dt-autofill-handle {
   position: absolute;
   height: 10px;
@@ -948,13 +1254,21 @@ div.dt-autofill-select {
   position: absolute;
   z-index: 1001;
   background-color: #4989de;
-  background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255, 255, 255, 0.5) 5px, rgba(255, 255, 255, 0.5) 10px);
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 5px,
+    rgba(255, 255, 255, 0.5) 5px,
+    rgba(255, 255, 255, 0.5) 10px
+  );
 }
-div.dt-autofill-select.top, div.dt-autofill-select.bottom {
+div.dt-autofill-select.top,
+div.dt-autofill-select.bottom {
   height: 3px;
   margin-top: -1px;
 }
-div.dt-autofill-select.left, div.dt-autofill-select.right {
+div.dt-autofill-select.left,
+div.dt-autofill-select.right {
   width: 3px;
   margin-left: -1px;
 }
@@ -1003,7 +1317,10 @@ div.dt-autofill-list > div.dt-autofill-list-items > button:first-child {
 div.dt-autofill-list > div.dt-autofill-list-items > button:last-child {
   margin-bottom: 0;
 }
-div.dt-autofill-list > div.dt-autofill-list-items > button input[type=number] {
+div.dt-autofill-list
+  > div.dt-autofill-list-items
+  > button
+  input[type="number"] {
   display: inline-block;
   box-sizing: border-box;
   padding: 6px;
@@ -1025,7 +1342,11 @@ div.dt-autofill-background {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
-  background: radial-gradient(ellipse farthest-corner at center, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: radial-gradient(
+    ellipse farthest-corner at center,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
   z-index: 103;
 }
 
@@ -1036,7 +1357,13 @@ html.dark div.dt-autofill-select {
   position: absolute;
   z-index: 1001;
   background-color: rgb(110, 168, 254);
-  background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0, 0, 0, 0.5) 5px, rgba(0, 0, 0, 0.5) 10px);
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 5px,
+    rgba(0, 0, 0, 0.5) 5px,
+    rgba(0, 0, 0, 0.5) 10px
+  );
 }
 html.dark div.dt-autofill-list {
   background-color: var(--dt-html-background);
@@ -1064,7 +1391,6 @@ html.dark div.dt-autofill-list button:hover {
 div.dt-autofill-list button {
   padding: 0.35em 1em;
 }
-
 
 @keyframes dtb-spinner {
   100% {
@@ -1199,7 +1525,9 @@ div.dt-button-collection .dt-button-active.dt-button-split:after {
 div.dt-button-collection .dt-button-active.dt-button-split > *:first-child {
   padding-right: 3em;
 }
-div.dt-button-collection .dt-button-active.dt-button-split > *:first-child:after {
+div.dt-button-collection
+  .dt-button-active.dt-button-split
+  > *:first-child:after {
   position: absolute;
   top: 50%;
   margin-top: -10px;
@@ -1362,11 +1690,15 @@ div.dt-button-collection.fixed > :last-child {
   max-height: 100vh;
   overflow: auto;
 }
-div.dt-button-collection.two-column > :last-child, div.dt-button-collection.three-column > :last-child, div.dt-button-collection.four-column > :last-child {
+div.dt-button-collection.two-column > :last-child,
+div.dt-button-collection.three-column > :last-child,
+div.dt-button-collection.four-column > :last-child {
   display: block !important;
   column-gap: 8px;
 }
-div.dt-button-collection.two-column > :last-child > *, div.dt-button-collection.three-column > :last-child > *, div.dt-button-collection.four-column > :last-child > * {
+div.dt-button-collection.two-column > :last-child > *,
+div.dt-button-collection.three-column > :last-child > *,
+div.dt-button-collection.four-column > :last-child > * {
   -webkit-column-break-inside: avoid;
   break-inside: avoid;
 }
@@ -1411,7 +1743,9 @@ div.dt-button-collection.columns > :last-child .dt-button {
   flex: 0 1;
   margin: 0;
 }
-div.dt-button-collection.columns.dtb-b3 > :last-child, div.dt-button-collection.columns.dtb-b2 > :last-child, div.dt-button-collection.columns.dtb-b1 > :last-child {
+div.dt-button-collection.columns.dtb-b3 > :last-child,
+div.dt-button-collection.columns.dtb-b2 > :last-child,
+div.dt-button-collection.columns.dtb-b1 > :last-child {
   justify-content: space-between;
 }
 div.dt-button-collection.columns.dtb-b3 .dt-button {
@@ -1470,7 +1804,11 @@ div.dt-button-background {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7); /* Fallback */
-  background: radial-gradient(ellipse farthest-corner at center, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%); /* W3C Markup, IE10 Release Preview */
+  background: radial-gradient(
+    ellipse farthest-corner at center,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  ); /* W3C Markup, IE10 Release Preview */
   z-index: 2001;
 }
 
@@ -1480,7 +1818,6 @@ div.dt-button-background {
     text-align: center;
   }
 }
-
 
 body.dtcr-dragging {
   overflow-x: hidden;
@@ -1497,16 +1834,15 @@ table.dataTable tbody tr td.dtcr-moving {
   background-color: rgba(127, 127, 127, 0.15);
 }
 table.dataTable tbody tr td.dtcr-moving-first {
-  border-left: 1px solid #0259C4;
+  border-left: 1px solid #0259c4;
 }
 table.dataTable tbody tr td.dtcr-moving-last {
-  border-right: 1px solid #0259C4;
+  border-right: 1px solid #0259c4;
 }
 
 html.dark table.dtcr-cloned.dataTable {
   background-color: rgba(33, 33, 33, 0.9);
 }
-
 
 :root {
   --dtcc-button_background: transparent;
@@ -1584,9 +1920,21 @@ table.dataTable div.dt-column-header span.dt-column-title:empty + span.dtcc {
   margin-left: auto;
 }
 
-table.dataTable .dt-type-numeric div.dt-column-header span.dt-column-title:empty + span.dtcc,
-table.dataTable .dt-type-date div.dt-column-header span.dt-column-title:empty + span.dtcc,
-table.dataTable .dt-right div.dt-column-header span.dt-column-title:empty + span.dtcc {
+table.dataTable
+  .dt-type-numeric
+  div.dt-column-header
+  span.dt-column-title:empty
+  + span.dtcc,
+table.dataTable
+  .dt-type-date
+  div.dt-column-header
+  span.dt-column-title:empty
+  + span.dtcc,
+table.dataTable
+  .dt-right
+  div.dt-column-header
+  span.dt-column-title:empty
+  + span.dtcc {
   margin-right: auto;
   margin-left: 0;
 }
@@ -1692,11 +2040,19 @@ table.dataTable span.dtcc div.dtcc-search:empty {
   display: none;
 }
 
-table.dataTable span.dtcc div.dtcc-search.dtcc-search_active > div div.dtcc-search-type-icon svg {
+table.dataTable
+  span.dtcc
+  div.dtcc-search.dtcc-search_active
+  > div
+  div.dtcc-search-type-icon
+  svg {
   opacity: 1;
 }
 
-table.dataTable span.dtcc div.dtcc-search:not(.dtcc-search_active) span.dtcc-search-clear {
+table.dataTable
+  span.dtcc
+  div.dtcc-search:not(.dtcc-search_active)
+  span.dtcc-search-clear {
   display: none;
 }
 
@@ -1722,7 +2078,11 @@ table.dataTable span.dtcc div.dtcc-search > div div.dtcc-search-type-icon svg {
   vertical-align: initial;
 }
 
-table.dataTable span.dtcc div.dtcc-search > div div.dtcc-search-type-icon:hover {
+table.dataTable
+  span.dtcc
+  div.dtcc-search
+  > div
+  div.dtcc-search-type-icon:hover {
   background-color: var(--dtcc-search-icon_hover-background);
 }
 
@@ -1780,7 +2140,11 @@ table.dataTable span.dtcc div.dtcc-searchText > div input {
 }
 
 table.dataTable span.dtcc div.dtcc-searchNumber > div div.dtcc-search-type-icon,
-table.dataTable span.dtcc div.dtcc-searchDateTime > div div.dtcc-search-type-icon {
+table.dataTable
+  span.dtcc
+  div.dtcc-searchDateTime
+  > div
+  div.dtcc-search-type-icon {
   left: 0;
   z-index: 1;
 }
@@ -1969,7 +2333,9 @@ div.dtcc-dropdown div.dtcc-search > div span.dtcc-search-clear {
   cursor: pointer;
 }
 
-div.dtcc-dropdown div.dtcc-search:not(.dtcc-search_active) span.dtcc-search-clear {
+div.dtcc-dropdown
+  div.dtcc-search:not(.dtcc-search_active)
+  span.dtcc-search-clear {
   display: none;
 }
 
@@ -1994,8 +2360,14 @@ div.dtcc-dropdown div.dtcc-list div.dtcc-list-controls:empty {
   display: none;
 }
 
-div.dtcc-dropdown div.dtcc-list div.dtcc-list-controls button.dtcc-list-selectAll,
-div.dtcc-dropdown div.dtcc-list div.dtcc-list-controls button.dtcc-list-selectNone {
+div.dtcc-dropdown
+  div.dtcc-list
+  div.dtcc-list-controls
+  button.dtcc-list-selectAll,
+div.dtcc-dropdown
+  div.dtcc-list
+  div.dtcc-list-controls
+  button.dtcc-list-selectNone {
   width: 100%;
   padding: 0;
   border: none;
@@ -2006,13 +2378,27 @@ div.dtcc-dropdown div.dtcc-list div.dtcc-list-controls button.dtcc-list-selectNo
   cursor: pointer;
 }
 
-div.dtcc-dropdown div.dtcc-list div.dtcc-list-controls button.dtcc-list-selectAll:hover,
-div.dtcc-dropdown div.dtcc-list div.dtcc-list-controls button.dtcc-list-selectNone:hover {
+div.dtcc-dropdown
+  div.dtcc-list
+  div.dtcc-list-controls
+  button.dtcc-list-selectAll:hover,
+div.dtcc-dropdown
+  div.dtcc-list
+  div.dtcc-list-controls
+  button.dtcc-list-selectNone:hover {
   text-decoration: underline;
 }
 
-div.dtcc-dropdown div.dtcc-list div.dtcc-list-controls button.dtcc-list-selectAll span,
-div.dtcc-dropdown div.dtcc-list div.dtcc-list-controls button.dtcc-list-selectNone span {
+div.dtcc-dropdown
+  div.dtcc-list
+  div.dtcc-list-controls
+  button.dtcc-list-selectAll
+  span,
+div.dtcc-dropdown
+  div.dtcc-list
+  div.dtcc-list-controls
+  button.dtcc-list-selectNone
+  span {
   display: inline-block;
   padding-left: 0.25em;
 }
@@ -2037,12 +2423,11 @@ div.dtcc-dropdown div.dtcc-list span.dtcc-button-icon:empty {
   display: none;
 }
 
-
 :root {
   --dt-datetime_background: white;
   --dt-datetime_zindex: 2050;
   --dt-datetime_border: 1px solid #ccc;
-  --dt-datetime_box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);
+  --dt-datetime_box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
   --dt-datetime_padding: 6px 20px;
   --dt-datetime_width: 275px;
   --dt-datetime_border-radius: 5px;
@@ -2065,7 +2450,7 @@ div.dtcc-dropdown div.dtcc-list span.dtcc-button-icon:empty {
   --dt-datetime-table_hover-background: #ff8000;
   --dt-datetime-table_hover-color: white;
   --dt-datetime-table-now_background: #ddd;
-  --dt-datetime-table-selected_background: #4E6CA3;
+  --dt-datetime-table-selected_background: #4e6ca3;
   --dt-datetime-table-selected_color: white;
   --dt-datetime-label_height: 30px;
   --dt-datetime-label_border: 1px solid transparent;
@@ -2082,8 +2467,8 @@ div.dtcc-dropdown div.dtcc-list span.dtcc-button-icon:empty {
 }
 
 html.dark,
-:root[data-theme=dark],
-:root[data-bs-theme=dark] {
+:root[data-theme="dark"],
+:root[data-bs-theme="dark"] {
   --dt-datetime_background: rgb(33, 37, 41);
   --dt-datetime_border: 1px solid rgb(89, 91, 94);
   --dt-datetime_box-shadow: 3px 4px 10px 1px rgba(0, 0, 0, 0.8);
@@ -2348,15 +2733,15 @@ div.dt-datetime-error {
 
 html.dark input.dt-datetime,
 html.dark select,
-:root[data-theme=dark] input.dt-datetime,
-:root[data-theme=dark] select,
-:root[data-bs-theme=dark] input.dt-datetime,
-:root[data-bs-theme=dark] select {
+:root[data-theme="dark"] input.dt-datetime,
+:root[data-theme="dark"] select,
+:root[data-bs-theme="dark"] input.dt-datetime,
+:root[data-bs-theme="dark"] select {
   color-scheme: dark;
 }
 html.dark.inline,
-:root[data-theme=dark].inline,
-:root[data-bs-theme=dark].inline {
+:root[data-theme="dark"].inline,
+:root[data-bs-theme="dark"].inline {
   box-shadow: none;
   border: none;
 }
@@ -2409,7 +2794,10 @@ table.dataTable.dtfc-scrolling-left tr > .dtfc-fixed-left::after {
 table.dataTable.dtfc-scrolling-right tr > .dtfc-fixed-right::after {
   box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, 0.2);
 }
-table.dataTable.dtfc-scrolling-right tr > .dtfc-fixed-right + .dtfc-fixed-right::after {
+table.dataTable.dtfc-scrolling-right
+  tr
+  > .dtfc-fixed-right
+  + .dtfc-fixed-right::after {
   box-shadow: none;
 }
 
@@ -2425,13 +2813,26 @@ div.dtfh-floatingparent div.dtfc-bottom-blocker {
   background-color: var(--dtfc-thead-cell_background);
 }
 
-html.dark table.dataTable.dtfc-scrolling-left tbody > tr > .dtfc-fixed-left::after {
+html.dark
+  table.dataTable.dtfc-scrolling-left
+  tbody
+  > tr
+  > .dtfc-fixed-left::after {
   box-shadow: inset 10px 0 8px -8px rgba(0, 0, 0, 0.3);
 }
-html.dark table.dataTable.dtfc-scrolling-right tbody > tr > .dtfc-fixed-right::after {
+html.dark
+  table.dataTable.dtfc-scrolling-right
+  tbody
+  > tr
+  > .dtfc-fixed-right::after {
   box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, 0.3);
 }
-html.dark table.dataTable.dtfc-scrolling-right tbody > tr > .dtfc-fixed-right + .dtfc-fixed-right::after {
+html.dark
+  table.dataTable.dtfc-scrolling-right
+  tbody
+  > tr
+  > .dtfc-fixed-right
+  + .dtfc-fixed-right::after {
   box-shadow: none;
 }
 
@@ -2442,11 +2843,11 @@ div.dtfc-top-blocker {
 }
 
 table.dataTable thead > tr > *.ui-state-default {
-  background: #DADFE9;
-  border: 1px solid #EEF0F3;
+  background: #dadfe9;
+  border: 1px solid #eef0f3;
 }
 table.dataTable thead > tr > .dtfc-fixed-right {
-  border-left: 1px solid #EEF0F3;
+  border-left: 1px solid #eef0f3;
 }
 
 tr.dt-rowReorder-moving td.dtfc-fixed-start,
@@ -2458,7 +2859,6 @@ tr.dt-rowReorder-moving td.dtfc-fixed-start:first-child {
 tr.dt-rowReorder-moving td.dtfc-fixed-end:last-child {
   border-right: 2px solid #555 !important;
 }
-
 
 table.dataTable.fixedHeader-floating,
 table.dataTable.fixedHeader-locked {
@@ -2472,7 +2872,6 @@ table.dataTable.fixedHeader-locked {
     display: none;
   }
 }
-
 
 table.dataTable tbody th.focus,
 table.dataTable tbody td.focus {
@@ -2503,7 +2902,6 @@ html.dark div.dtk-focus-alt table.dataTable tbody td.focus {
   outline-color: #ff8b33;
 }
 
-
 table.dataTable.dtr-inline.collapsed > tbody > tr > td.child,
 table.dataTable.dtr-inline.collapsed > tbody > tr > th.child,
 table.dataTable.dtr-inline.collapsed > tbody > tr > td.dataTables_empty {
@@ -2529,15 +2927,27 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {
   border-bottom: 5px solid transparent;
   border-right: 0px solid transparent;
 }
-table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control.arrow-right::before,
-table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control.arrow-right::before {
+table.dataTable.dtr-inline.collapsed
+  > tbody
+  > tr
+  > td.dtr-control.arrow-right::before,
+table.dataTable.dtr-inline.collapsed
+  > tbody
+  > tr
+  > th.dtr-control.arrow-right::before {
   border-top: 5px solid transparent;
   border-left: 0px solid transparent;
   border-bottom: 5px solid transparent;
   border-right: 10px solid rgba(0, 0, 0, 0.5);
 }
-table.dataTable.dtr-inline.collapsed > tbody > tr.dtr-expanded > td.dtr-control:before,
-table.dataTable.dtr-inline.collapsed > tbody > tr.dtr-expanded > th.dtr-control:before {
+table.dataTable.dtr-inline.collapsed
+  > tbody
+  > tr.dtr-expanded
+  > td.dtr-control:before,
+table.dataTable.dtr-inline.collapsed
+  > tbody
+  > tr.dtr-expanded
+  > th.dtr-control:before {
   border-top: 10px solid rgba(0, 0, 0, 0.5);
   border-left: 5px solid transparent;
   border-bottom: 0px solid transparent;
@@ -2674,31 +3084,51 @@ div.dtr-modal div.dtr-modal-background {
   }
 }
 html.dark table.dataTable > tbody > tr > td.dtr-control:before,
-html[data-bs-theme=dark] table.dataTable > tbody > tr > td.dtr-control:before {
+html[data-bs-theme="dark"]
+  table.dataTable
+  > tbody
+  > tr
+  > td.dtr-control:before {
   border-left-color: rgba(255, 255, 255, 0.5) !important;
 }
 html.dark table.dataTable > tbody > tr > td.dtr-control.arrow-right::before,
-html[data-bs-theme=dark] table.dataTable > tbody > tr > td.dtr-control.arrow-right::before {
+html[data-bs-theme="dark"]
+  table.dataTable
+  > tbody
+  > tr
+  > td.dtr-control.arrow-right::before {
   border-right-color: rgba(255, 255, 255, 0.5) !important;
 }
 html.dark table.dataTable > tbody > tr.dtr-expanded > td.dtr-control:before,
 html.dark table.dataTable > tbody > tr.dtr-expanded > th.dtr-control:before,
-html[data-bs-theme=dark] table.dataTable > tbody > tr.dtr-expanded > td.dtr-control:before,
-html[data-bs-theme=dark] table.dataTable > tbody > tr.dtr-expanded > th.dtr-control:before {
+html[data-bs-theme="dark"]
+  table.dataTable
+  > tbody
+  > tr.dtr-expanded
+  > td.dtr-control:before,
+html[data-bs-theme="dark"]
+  table.dataTable
+  > tbody
+  > tr.dtr-expanded
+  > th.dtr-control:before {
   border-top-color: rgba(255, 255, 255, 0.5) !important;
   border-left-color: transparent !important;
   border-right-color: transparent !important;
 }
 html.dark table.dataTable > tbody > tr.child ul.dtr-details > li,
-html[data-bs-theme=dark] table.dataTable > tbody > tr.child ul.dtr-details > li {
+html[data-bs-theme="dark"]
+  table.dataTable
+  > tbody
+  > tr.child
+  ul.dtr-details
+  > li {
   border-bottom-color: rgb(64, 67, 70);
 }
 html.dark div.dtr-modal div.dtr-modal-display,
-html[data-bs-theme=dark] div.dtr-modal div.dtr-modal-display {
+html[data-bs-theme="dark"] div.dtr-modal div.dtr-modal-display {
   background-color: rgb(33, 37, 41);
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
-
 
 table.dataTable tr.dtrg-group th {
   background-color: rgba(0, 0, 0, 0.1);
@@ -2754,7 +3184,6 @@ html.dark table.dataTable tr.dtrg-group.dtrg-level-5 th {
   background-color: rgba(255, 255, 255, 0.01);
 }
 
-
 div.dt-rowReorder-float-parent {
   table-layout: fixed;
   outline: 2px solid rgb(10, 89, 203);
@@ -2797,7 +3226,6 @@ html.dark tr.dt-rowReorder-moving {
   outline-color: #aaa;
 }
 
-
 div.dts {
   display: block !important;
 }
@@ -2822,7 +3250,13 @@ div.dts div.dts_label {
 }
 div.dts div.dt-scroll-body,
 div.dts div.dataTables_scrollBody {
-  background: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0.025) 10px, rgba(0, 0, 0, 0) 10px, rgba(0, 0, 0, 0) 20px);
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.025),
+    rgba(0, 0, 0, 0.025) 10px,
+    rgba(0, 0, 0, 0) 10px,
+    rgba(0, 0, 0, 0) 20px
+  );
 }
 div.dts div.dt-scroll-body table,
 div.dts div.dataTables_scrollBody table {
@@ -2842,14 +3276,19 @@ html.dark div.dts div.dts_label {
 }
 html.dark div.dts div.dt-scroll-body,
 html.dark div.dts div.dataTables_scrollBody {
-  background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.025) 10px, rgba(255, 255, 255, 0) 10px, rgba(255, 255, 255, 0) 20px);
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.025),
+    rgba(255, 255, 255, 0.025) 10px,
+    rgba(255, 255, 255, 0) 10px,
+    rgba(255, 255, 255, 0) 20px
+  );
 }
 html.dark div.dts div.dt-scroll-body table,
 html.dark div.dts div.dataTables_scrollBody table {
   background-color: var(--dt-html-background);
   z-index: 2;
 }
-
 
 div.dt-button-collection {
   overflow: visible !important;
@@ -2899,7 +3338,9 @@ div.dtsb-searchBuilder div.dtsb-titleRow button.dtsb-clearAll {
   float: right;
   margin-bottom: 0.8em;
 }
-div.dtsb-searchBuilder div.dtsb-vertical .dtsb-value, div.dtsb-searchBuilder div.dtsb-vertical .dtsb-data, div.dtsb-searchBuilder div.dtsb-vertical .dtsb-condition {
+div.dtsb-searchBuilder div.dtsb-vertical .dtsb-value,
+div.dtsb-searchBuilder div.dtsb-vertical .dtsb-data,
+div.dtsb-searchBuilder div.dtsb-vertical .dtsb-condition {
   display: block;
 }
 div.dtsb-searchBuilder div.dtsb-group {
@@ -2940,8 +3381,16 @@ div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria input.dtsb-input {
   color: inherit;
   font-size: 1em;
 }
-div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria select.dtsb-dropDown option.dtsb-notItalic,
-div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria input.dtsb-input option.dtsb-notItalic {
+div.dtsb-searchBuilder
+  div.dtsb-group
+  div.dtsb-criteria
+  select.dtsb-dropDown
+  option.dtsb-notItalic,
+div.dtsb-searchBuilder
+  div.dtsb-group
+  div.dtsb-criteria
+  input.dtsb-input
+  option.dtsb-notItalic {
   font-style: normal;
 }
 div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria select.dtsb-italic {
@@ -2951,25 +3400,72 @@ div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-inputCont {
   flex: 1;
   white-space: nowrap;
 }
-div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-inputCont span.dtsb-joiner {
+div.dtsb-searchBuilder
+  div.dtsb-group
+  div.dtsb-criteria
+  div.dtsb-inputCont
+  span.dtsb-joiner {
   margin-right: 0.8em;
 }
-div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-inputCont input.dtsb-value {
+div.dtsb-searchBuilder
+  div.dtsb-group
+  div.dtsb-criteria
+  div.dtsb-inputCont
+  input.dtsb-value {
   width: 33%;
 }
-div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-inputCont select,
-div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-inputCont input {
+div.dtsb-searchBuilder
+  div.dtsb-group
+  div.dtsb-criteria
+  div.dtsb-inputCont
+  select,
+div.dtsb-searchBuilder
+  div.dtsb-group
+  div.dtsb-criteria
+  div.dtsb-inputCont
+  input {
   height: 100%;
   box-sizing: border-box;
 }
-div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-buttonContainer {
+div.dtsb-searchBuilder
+  div.dtsb-group
+  div.dtsb-criteria
+  div.dtsb-buttonContainer {
   margin-left: auto;
   display: inline-block;
 }
-div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-buttonContainer button.dtsb-delete, div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-buttonContainer button.dtsb-right, div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-buttonContainer button.dtsb-left {
+div.dtsb-searchBuilder
+  div.dtsb-group
+  div.dtsb-criteria
+  div.dtsb-buttonContainer
+  button.dtsb-delete,
+div.dtsb-searchBuilder
+  div.dtsb-group
+  div.dtsb-criteria
+  div.dtsb-buttonContainer
+  button.dtsb-right,
+div.dtsb-searchBuilder
+  div.dtsb-group
+  div.dtsb-criteria
+  div.dtsb-buttonContainer
+  button.dtsb-left {
   margin-right: 0.8em;
 }
-div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-buttonContainer button.dtsb-delete:last-child, div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-buttonContainer button.dtsb-right:last-child, div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-buttonContainer button.dtsb-left:last-child {
+div.dtsb-searchBuilder
+  div.dtsb-group
+  div.dtsb-criteria
+  div.dtsb-buttonContainer
+  button.dtsb-delete:last-child,
+div.dtsb-searchBuilder
+  div.dtsb-group
+  div.dtsb-criteria
+  div.dtsb-buttonContainer
+  button.dtsb-right:last-child,
+div.dtsb-searchBuilder
+  div.dtsb-group
+  div.dtsb-criteria
+  div.dtsb-buttonContainer
+  button.dtsb-left:last-child {
   margin-right: 0;
 }
 @media screen and (max-width: 550px) {
@@ -2981,10 +3477,14 @@ div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-buttonContainer
     padding-right: calc(35px + 0.8em);
     margin-bottom: 0px;
   }
-  div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria:not(:first-child), div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria:not(:nth-child(2)), div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria:not(:last-child) {
+  div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria:not(:first-child),
+  div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria:not(:nth-child(2)),
+  div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria:not(:last-child) {
     padding-top: 0.8em;
   }
-  div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria:first-child, div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria:nth-child(2), div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria:last-child {
+  div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria:first-child,
+  div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria:nth-child(2),
+  div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria:last-child {
     padding-top: 0em;
   }
   div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria select.dtsb-dropDown,
@@ -2997,14 +3497,21 @@ div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-buttonContainer
   div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-inputCont {
     margin-right: 0.8em;
   }
-  div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-buttonContainer {
+  div.dtsb-searchBuilder
+    div.dtsb-group
+    div.dtsb-criteria
+    div.dtsb-buttonContainer {
     position: absolute;
     width: 35px;
     display: flex;
     flex-wrap: wrap-reverse;
     right: 0;
   }
-  div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-buttonContainer button {
+  div.dtsb-searchBuilder
+    div.dtsb-group
+    div.dtsb-criteria
+    div.dtsb-buttonContainer
+    button {
     margin-right: 0px !important;
   }
 }
@@ -3021,7 +3528,8 @@ div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria select.dtsb-condition {
 div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria select.dtsb-data {
   border-color: #e70f00;
 }
-div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria select.dtsb-value, div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria input.dtsb-value {
+div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria select.dtsb-value,
+div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria input.dtsb-value {
   border-color: #0069ba;
 }
 div.dtsb-searchBuilder div.dtsb-group button.dtsb-button {
@@ -3038,7 +3546,10 @@ div.dtsb-searchBuilder div.dtsb-group div.dtsb-logicContainer {
   align-items: flex-start;
   margin-top: 10px;
 }
-div.dtsb-searchBuilder div.dtsb-group div.dtsb-logicContainer button.dtsb-logic {
+div.dtsb-searchBuilder
+  div.dtsb-group
+  div.dtsb-logicContainer
+  button.dtsb-logic {
   border: none;
   border-radius: 0px;
   flex-grow: 1;
@@ -3046,13 +3557,15 @@ div.dtsb-searchBuilder div.dtsb-group div.dtsb-logicContainer button.dtsb-logic 
   flex-basis: 2.5em;
   margin: 0px;
 }
-div.dtsb-searchBuilder div.dtsb-group div.dtsb-logicContainer button.dtsb-clearGroup {
+div.dtsb-searchBuilder
+  div.dtsb-group
+  div.dtsb-logicContainer
+  button.dtsb-clearGroup {
   border: none;
   border-radius: 0px;
   width: 2em;
   margin: 0px;
 }
-
 
 div.dtsp-topRow {
   display: flex;
@@ -3089,7 +3602,7 @@ div.dtsp-topRow div.dtsp-subRow1 input {
   box-sizing: border-box;
   font-size: 1em;
 }
-div.dtsp-topRow div.dtsp-subRow1 input[disabled=disabled] {
+div.dtsp-topRow div.dtsp-subRow1 input[disabled="disabled"] {
   background-color: transparent;
   border: none;
   cursor: initial;
@@ -3100,7 +3613,7 @@ div.dtsp-topRow div.dtsp-subRow1 input[disabled=disabled] {
   height: fit-content;
   box-sizing: content-box;
 }
-div.dtsp-topRow div.dtsp-subRow1 input[disabled=disabled]::placeholder {
+div.dtsp-topRow div.dtsp-subRow1 input[disabled="disabled"]::placeholder {
   color: initial;
   opacity: 1;
 }
@@ -3280,20 +3793,45 @@ div.dtsp-searchPane div.dt-container div.dataTables_scrollBody table tr > th,
 div.dtsp-searchPane div.dt-container div.dataTables_scrollBody table tr > td,
 div.dtsp-searchPane div.dataTables_wrapper div.dt-scroll-body table tr > th,
 div.dtsp-searchPane div.dataTables_wrapper div.dt-scroll-body table tr > td,
-div.dtsp-searchPane div.dataTables_wrapper div.dataTables_scrollBody table tr > th,
-div.dtsp-searchPane div.dataTables_wrapper div.dataTables_scrollBody table tr > td {
+div.dtsp-searchPane
+  div.dataTables_wrapper
+  div.dataTables_scrollBody
+  table
+  tr
+  > th,
+div.dtsp-searchPane
+  div.dataTables_wrapper
+  div.dataTables_scrollBody
+  table
+  tr
+  > td {
   padding: 5px 10px;
 }
 div.dtsp-searchPane div.dt-container div.dt-scroll-body td.dtsp-nameColumn,
-div.dtsp-searchPane div.dt-container div.dataTables_scrollBody td.dtsp-nameColumn,
-div.dtsp-searchPane div.dataTables_wrapper div.dt-scroll-body td.dtsp-nameColumn,
-div.dtsp-searchPane div.dataTables_wrapper div.dataTables_scrollBody td.dtsp-nameColumn {
+div.dtsp-searchPane
+  div.dt-container
+  div.dataTables_scrollBody
+  td.dtsp-nameColumn,
+div.dtsp-searchPane
+  div.dataTables_wrapper
+  div.dt-scroll-body
+  td.dtsp-nameColumn,
+div.dtsp-searchPane
+  div.dataTables_wrapper
+  div.dataTables_scrollBody
+  td.dtsp-nameColumn {
   width: 100% !important;
 }
 div.dtsp-searchPane div.dt-container div.dt-scroll-body div.dtsp-nameCont,
-div.dtsp-searchPane div.dt-container div.dataTables_scrollBody div.dtsp-nameCont,
+div.dtsp-searchPane
+  div.dt-container
+  div.dataTables_scrollBody
+  div.dtsp-nameCont,
 div.dtsp-searchPane div.dataTables_wrapper div.dt-scroll-body div.dtsp-nameCont,
-div.dtsp-searchPane div.dataTables_wrapper div.dataTables_scrollBody div.dtsp-nameCont {
+div.dtsp-searchPane
+  div.dataTables_wrapper
+  div.dataTables_scrollBody
+  div.dtsp-nameCont {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -3301,20 +3839,68 @@ div.dtsp-searchPane div.dataTables_wrapper div.dataTables_scrollBody div.dtsp-na
   align-content: flex-start;
   align-items: flex-start;
 }
-div.dtsp-searchPane div.dt-container div.dt-scroll-body div.dtsp-nameCont span.dtsp-name,
-div.dtsp-searchPane div.dt-container div.dt-scroll-body div.dtsp-nameCont span.dtsp-pill,
-div.dtsp-searchPane div.dt-container div.dataTables_scrollBody div.dtsp-nameCont span.dtsp-name,
-div.dtsp-searchPane div.dt-container div.dataTables_scrollBody div.dtsp-nameCont span.dtsp-pill,
-div.dtsp-searchPane div.dataTables_wrapper div.dt-scroll-body div.dtsp-nameCont span.dtsp-name,
-div.dtsp-searchPane div.dataTables_wrapper div.dt-scroll-body div.dtsp-nameCont span.dtsp-pill,
-div.dtsp-searchPane div.dataTables_wrapper div.dataTables_scrollBody div.dtsp-nameCont span.dtsp-name,
-div.dtsp-searchPane div.dataTables_wrapper div.dataTables_scrollBody div.dtsp-nameCont span.dtsp-pill {
+div.dtsp-searchPane
+  div.dt-container
+  div.dt-scroll-body
+  div.dtsp-nameCont
+  span.dtsp-name,
+div.dtsp-searchPane
+  div.dt-container
+  div.dt-scroll-body
+  div.dtsp-nameCont
+  span.dtsp-pill,
+div.dtsp-searchPane
+  div.dt-container
+  div.dataTables_scrollBody
+  div.dtsp-nameCont
+  span.dtsp-name,
+div.dtsp-searchPane
+  div.dt-container
+  div.dataTables_scrollBody
+  div.dtsp-nameCont
+  span.dtsp-pill,
+div.dtsp-searchPane
+  div.dataTables_wrapper
+  div.dt-scroll-body
+  div.dtsp-nameCont
+  span.dtsp-name,
+div.dtsp-searchPane
+  div.dataTables_wrapper
+  div.dt-scroll-body
+  div.dtsp-nameCont
+  span.dtsp-pill,
+div.dtsp-searchPane
+  div.dataTables_wrapper
+  div.dataTables_scrollBody
+  div.dtsp-nameCont
+  span.dtsp-name,
+div.dtsp-searchPane
+  div.dataTables_wrapper
+  div.dataTables_scrollBody
+  div.dtsp-nameCont
+  span.dtsp-pill {
   cursor: default;
 }
-div.dtsp-searchPane div.dt-container div.dt-scroll-body div.dtsp-nameCont span.dtsp-name,
-div.dtsp-searchPane div.dt-container div.dataTables_scrollBody div.dtsp-nameCont span.dtsp-name,
-div.dtsp-searchPane div.dataTables_wrapper div.dt-scroll-body div.dtsp-nameCont span.dtsp-name,
-div.dtsp-searchPane div.dataTables_wrapper div.dataTables_scrollBody div.dtsp-nameCont span.dtsp-name {
+div.dtsp-searchPane
+  div.dt-container
+  div.dt-scroll-body
+  div.dtsp-nameCont
+  span.dtsp-name,
+div.dtsp-searchPane
+  div.dt-container
+  div.dataTables_scrollBody
+  div.dtsp-nameCont
+  span.dtsp-name,
+div.dtsp-searchPane
+  div.dataTables_wrapper
+  div.dt-scroll-body
+  div.dtsp-nameCont
+  span.dtsp-name,
+div.dtsp-searchPane
+  div.dataTables_wrapper
+  div.dataTables_scrollBody
+  div.dtsp-nameCont
+  span.dtsp-name {
   text-overflow: ellipsis;
   overflow: hidden;
   display: inline-block;
@@ -3323,10 +3909,26 @@ div.dtsp-searchPane div.dataTables_wrapper div.dataTables_scrollBody div.dtsp-na
   flex-grow: 1;
   text-align: left;
 }
-div.dtsp-searchPane div.dt-container div.dt-scroll-body div.dtsp-nameCont span.dtsp-pill,
-div.dtsp-searchPane div.dt-container div.dataTables_scrollBody div.dtsp-nameCont span.dtsp-pill,
-div.dtsp-searchPane div.dataTables_wrapper div.dt-scroll-body div.dtsp-nameCont span.dtsp-pill,
-div.dtsp-searchPane div.dataTables_wrapper div.dataTables_scrollBody div.dtsp-nameCont span.dtsp-pill {
+div.dtsp-searchPane
+  div.dt-container
+  div.dt-scroll-body
+  div.dtsp-nameCont
+  span.dtsp-pill,
+div.dtsp-searchPane
+  div.dt-container
+  div.dataTables_scrollBody
+  div.dtsp-nameCont
+  span.dtsp-pill,
+div.dtsp-searchPane
+  div.dataTables_wrapper
+  div.dt-scroll-body
+  div.dtsp-nameCont
+  span.dtsp-pill,
+div.dtsp-searchPane
+  div.dataTables_wrapper
+  div.dataTables_scrollBody
+  div.dtsp-nameCont
+  span.dtsp-pill {
   display: inline-block;
   background-color: #cfcfcf;
   text-align: center;
@@ -3337,10 +3939,26 @@ div.dtsp-searchPane div.dataTables_wrapper div.dataTables_scrollBody div.dtsp-na
   font-size: 0.9em;
   padding: 0 4px;
 }
-div.dtsp-searchPane div.dt-container div.dt-scroll-body div.dtsp-nameCont span.dtsp-pill:empty,
-div.dtsp-searchPane div.dt-container div.dataTables_scrollBody div.dtsp-nameCont span.dtsp-pill:empty,
-div.dtsp-searchPane div.dataTables_wrapper div.dt-scroll-body div.dtsp-nameCont span.dtsp-pill:empty,
-div.dtsp-searchPane div.dataTables_wrapper div.dataTables_scrollBody div.dtsp-nameCont span.dtsp-pill:empty {
+div.dtsp-searchPane
+  div.dt-container
+  div.dt-scroll-body
+  div.dtsp-nameCont
+  span.dtsp-pill:empty,
+div.dtsp-searchPane
+  div.dt-container
+  div.dataTables_scrollBody
+  div.dtsp-nameCont
+  span.dtsp-pill:empty,
+div.dtsp-searchPane
+  div.dataTables_wrapper
+  div.dt-scroll-body
+  div.dtsp-nameCont
+  span.dtsp-pill:empty,
+div.dtsp-searchPane
+  div.dataTables_wrapper
+  div.dataTables_scrollBody
+  div.dtsp-nameCont
+  span.dtsp-pill:empty {
   display: none;
 }
 
@@ -3366,15 +3984,37 @@ div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane {
   font-size: 0.9em;
   margin-top: 15px !important;
 }
-div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane div.dt-container,
-div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane div.dataTables_wrapper {
+div.dtsp-panesContainer
+  div.dtsp-searchPanes
+  div.dtsp-searchPane
+  div.dt-container,
+div.dtsp-panesContainer
+  div.dtsp-searchPanes
+  div.dtsp-searchPane
+  div.dataTables_wrapper {
   flex: 1;
   box-sizing: border-box;
 }
-div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane div.dt-container div.dt-search,
-div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane div.dt-container div.dataTables_filter,
-div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane div.dataTables_wrapper div.dt-search,
-div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane div.dataTables_wrapper div.dataTables_filter {
+div.dtsp-panesContainer
+  div.dtsp-searchPanes
+  div.dtsp-searchPane
+  div.dt-container
+  div.dt-search,
+div.dtsp-panesContainer
+  div.dtsp-searchPanes
+  div.dtsp-searchPane
+  div.dt-container
+  div.dataTables_filter,
+div.dtsp-panesContainer
+  div.dtsp-searchPanes
+  div.dtsp-searchPane
+  div.dataTables_wrapper
+  div.dt-search,
+div.dtsp-panesContainer
+  div.dtsp-searchPanes
+  div.dtsp-searchPane
+  div.dataTables_wrapper
+  div.dataTables_filter {
   display: none;
 }
 div.dtsp-panesContainer div.dtsp-title {
@@ -3392,8 +4032,16 @@ div.dts.dtsp-hidden {
   display: none !important;
 }
 
-html.dark div.dtsp-topRow div.dtsp-subRow1 div.dtsp-searchCont input[disabled=disabled]::placeholder,
-html[data-bs-theme=dark] div.dtsp-topRow div.dtsp-subRow1 div.dtsp-searchCont input[disabled=disabled]::placeholder {
+html.dark
+  div.dtsp-topRow
+  div.dtsp-subRow1
+  div.dtsp-searchCont
+  input[disabled="disabled"]::placeholder,
+html[data-bs-theme="dark"]
+  div.dtsp-topRow
+  div.dtsp-subRow1
+  div.dtsp-searchCont
+  input[disabled="disabled"]::placeholder {
   color: white;
 }
 
@@ -3418,7 +4066,10 @@ div.dtsp-searchPane div.dataTables_wrapper table.dataTable {
 div.dtsp-searchPane div.dtsp-topRow {
   border: 1px solid transparent;
 }
-div.dtsp-searchPane div.dtsp-topRow div.dtsp-subRow1 input[disabled=disabled] {
+div.dtsp-searchPane
+  div.dtsp-topRow
+  div.dtsp-subRow1
+  input[disabled="disabled"] {
   padding-bottom: 5px;
 }
 div.dtsp-searchPane div.dtsp-topRow div.dtsp-searchCont input.dtsp-search {
@@ -3546,10 +4197,30 @@ html.dark div.dtsp-searchPane div.dataTables_wrapper div.dt-scroll-body,
 html.dark div.dtsp-searchPane div.dataTables_wrapper div.dataTables_scrollBody {
   background: rgb(47, 52, 56) !important;
 }
-html.dark div.dtsp-searchPane div.dt-container div.dt-scroll-body div.dtsp-nameCont span.dtsp-pill,
-html.dark div.dtsp-searchPane div.dt-container div.dataTables_scrollBody div.dtsp-nameCont span.dtsp-pill,
-html.dark div.dtsp-searchPane div.dataTables_wrapper div.dt-scroll-body div.dtsp-nameCont span.dtsp-pill,
-html.dark div.dtsp-searchPane div.dataTables_wrapper div.dataTables_scrollBody div.dtsp-nameCont span.dtsp-pill {
+html.dark
+  div.dtsp-searchPane
+  div.dt-container
+  div.dt-scroll-body
+  div.dtsp-nameCont
+  span.dtsp-pill,
+html.dark
+  div.dtsp-searchPane
+  div.dt-container
+  div.dataTables_scrollBody
+  div.dtsp-nameCont
+  span.dtsp-pill,
+html.dark
+  div.dtsp-searchPane
+  div.dataTables_wrapper
+  div.dt-scroll-body
+  div.dtsp-nameCont
+  span.dtsp-pill,
+html.dark
+  div.dtsp-searchPane
+  div.dataTables_wrapper
+  div.dataTables_scrollBody
+  div.dtsp-nameCont
+  span.dtsp-pill {
   background-color: rgb(33, 37, 41);
   color: inherit;
 }
@@ -3588,7 +4259,6 @@ div.dt-button-collection div.dtsp-panesContainer {
   background: transparent;
   border: none;
 }
-
 
 table.dataTable > tbody > tr > .selected {
   background-color: rgba(13, 110, 253, 0.9);
@@ -3689,10 +4359,11 @@ table.dataTable.compact > tbody > tr.selected > th.select-checkbox:after {
 }
 
 html.dark table.dataTable input.dt-select-checkbox:indeterminate:after,
-html[data-bs-theme=dark] table.dataTable input.dt-select-checkbox:indeterminate:after {
+html[data-bs-theme="dark"]
+  table.dataTable
+  input.dt-select-checkbox:indeterminate:after {
   background-color: white;
 }
-
 
 div.dtsr-confirmation,
 div.dtsr-creation {
@@ -3751,7 +4422,8 @@ div.dtsr-confirmation div.dtsr-creation-text span,
 div.dtsr-creation div.dtsr-creation-text span {
   font-size: 20px;
 }
-div.dtsr-confirmation div.dtsr-creation-form div.dtsr-left, div.dtsr-confirmation div.dtsr-creation-form div.dtsr-right,
+div.dtsr-confirmation div.dtsr-creation-form div.dtsr-left,
+div.dtsr-confirmation div.dtsr-creation-form div.dtsr-right,
 div.dtsr-creation div.dtsr-creation-form div.dtsr-left,
 div.dtsr-creation div.dtsr-creation-form div.dtsr-right {
   display: inline-block;
@@ -3761,7 +4433,8 @@ div.dtsr-confirmation div.dtsr-creation-form div.dtsr-left,
 div.dtsr-creation div.dtsr-creation-form div.dtsr-left {
   text-align: right;
 }
-div.dtsr-confirmation div.dtsr-creation-form div.dtsr-right, div.dtsr-confirmation div.dtsr-creation-form div.dtsr-name-row,
+div.dtsr-confirmation div.dtsr-creation-form div.dtsr-right,
+div.dtsr-confirmation div.dtsr-creation-form div.dtsr-name-row,
 div.dtsr-creation div.dtsr-creation-form div.dtsr-right,
 div.dtsr-creation div.dtsr-creation-form div.dtsr-name-row {
   text-align: left;
@@ -3791,12 +4464,30 @@ div.dtsr-confirmation div.dtsr-creation-form div.dtsr-form-row div.dtsr-input,
 div.dtsr-creation div.dtsr-creation-form div.dtsr-form-row div.dtsr-input {
   width: 75%;
 }
-div.dtsr-confirmation div.dtsr-creation-form div.dtsr-form-row div.dtsr-input div.dtsr-check-label,
-div.dtsr-creation div.dtsr-creation-form div.dtsr-form-row div.dtsr-input div.dtsr-check-label {
+div.dtsr-confirmation
+  div.dtsr-creation-form
+  div.dtsr-form-row
+  div.dtsr-input
+  div.dtsr-check-label,
+div.dtsr-creation
+  div.dtsr-creation-form
+  div.dtsr-form-row
+  div.dtsr-input
+  div.dtsr-check-label {
   margin-bottom: 0.5em;
 }
-div.dtsr-confirmation div.dtsr-creation-form div.dtsr-form-row div.dtsr-input div.dtsr-check-label input,
-div.dtsr-creation div.dtsr-creation-form div.dtsr-form-row div.dtsr-input div.dtsr-check-label input {
+div.dtsr-confirmation
+  div.dtsr-creation-form
+  div.dtsr-form-row
+  div.dtsr-input
+  div.dtsr-check-label
+  input,
+div.dtsr-creation
+  div.dtsr-creation-form
+  div.dtsr-form-row
+  div.dtsr-input
+  div.dtsr-check-label
+  input {
   margin-right: 0.5em;
 }
 div.dtsr-confirmation div.dtsr-confirmation-text,
@@ -3854,7 +4545,11 @@ div.dtsr-background {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
-  background: radial-gradient(ellipse farthest-corner at center, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: radial-gradient(
+    ellipse farthest-corner at center,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
 }
 
 div.dt-button-collection h3 {
@@ -3880,38 +4575,38 @@ div.dt-button-collection span.dtsr-emptyStates {
 
 html.dark div.dtsr-confirmation,
 html.dark div.dtsr-creation,
-html[data-bs-theme=dark] div.dtsr-confirmation,
-html[data-bs-theme=dark] div.dtsr-creation {
+html[data-bs-theme="dark"] div.dtsr-confirmation,
+html[data-bs-theme="dark"] div.dtsr-creation {
   background-color: rgb(33, 37, 41);
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 html.dark div.dtsr-confirmation button,
 html.dark div.dtsr-creation button,
-html[data-bs-theme=dark] div.dtsr-confirmation button,
-html[data-bs-theme=dark] div.dtsr-creation button {
+html[data-bs-theme="dark"] div.dtsr-confirmation button,
+html[data-bs-theme="dark"] div.dtsr-creation button {
   color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.175);
   background-color: rgb(47, 52, 56);
 }
 html.dark div.dtsr-confirmation button:hover,
 html.dark div.dtsr-creation button:hover,
-html[data-bs-theme=dark] div.dtsr-confirmation button:hover,
-html[data-bs-theme=dark] div.dtsr-creation button:hover {
+html[data-bs-theme="dark"] div.dtsr-confirmation button:hover,
+html[data-bs-theme="dark"] div.dtsr-creation button:hover {
   background-color: rgb(64, 69, 73);
 }
 
-.dt-length label{
+.dt-length label {
   display: none;
 }
-.dt-layout-row:nth-child(3){
+.dt-layout-row:nth-child(3) {
   height: 56px;
-  border-top: 1px solid #E5E9ED;
+  border-top: 1px solid #e5e9ed;
   margin: 64px 0 0 0 !important;
   position: relative;
   padding: 0 30px;
   align-items: center !important;
 }
-.dt-layout-row .dt-layout-end{
+.dt-layout-row .dt-layout-end {
   position: absolute;
   left: 0;
   top: 0;
@@ -3921,13 +4616,13 @@ html[data-bs-theme=dark] div.dtsr-creation button:hover {
   justify-content: center;
   width: 100%;
 }
-.dt-layout-row .dt-layout-end .dt-paging{
+.dt-layout-row .dt-layout-end .dt-paging {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
-.dt-layout-row:first-child{
+.dt-layout-row:first-child {
   width: auto !important;
   display: inline-flex !important;
   position: absolute;
@@ -3939,44 +4634,44 @@ html[data-bs-theme=dark] div.dtsr-creation button:hover {
   height: 56px;
   z-index: 10;
 }
-.dt-layout-row:first-child .dt-layout-start{
+.dt-layout-row:first-child .dt-layout-start {
   display: inline-flex !important;
   align-items: center;
   justify-content: flex-end !important;
 }
-.custom-head .dt-column-order{
+.custom-head .dt-column-order {
   display: none;
 }
-table.dataTable thead.custom-head > tr > *.ui-state-default{
-  background: #DADFE9;
+table.dataTable thead.custom-head > tr > *.ui-state-default {
+  background: #dadfe9;
   height: 40px;
-  border-bottom: 1px solid #EEF0F3;
+  border-bottom: 1px solid #eef0f3;
   font-size: 14px;
-  color: #1B1F2B;
+  color: #1b1f2b;
   font-weight: 500;
   text-align: center;
 }
-.dtfc-top-blocker{
+.dtfc-top-blocker {
   opacity: 0;
 }
-.dt-scroll-headInner{
+.dt-scroll-headInner {
   padding-right: 0 !important;
 }
 div.dt-container .dt-paging .fg-button:first-child,
-div.dt-container .dt-paging .fg-button:last-child{
+div.dt-container .dt-paging .fg-button:last-child {
   display: none !important;
 }
-.dt-layout-row .dt-layout-end .dt-paging nav{
+.dt-layout-row .dt-layout-end .dt-paging nav {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
 }
-div.dt-container .dt-paging .fg-button{
+div.dt-container .dt-paging .fg-button {
   width: 20px;
   height: 18px;
   font-size: 13px;
-  color: #838B9B;
+  color: #838b9b;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -3985,29 +4680,30 @@ div.dt-container .dt-paging .fg-button{
 
   background: transparent;
 }
-div.dt-container .dt-paging .fg-button.ui-state-disabled{
+div.dt-container .dt-paging .fg-button.ui-state-disabled {
   opacity: 1 !important;
   color: #fff;
-  background: #1C97DB;
-
+  background: #1c97db;
 }
-div.dt-container .dt-paging .fg-button.previous{
-  background: transparent url(../image/ico/ico-page-prev.svg) no-repeat center center;
-  color: #838B9B;
+div.dt-container .dt-paging .fg-button.previous {
+  background: transparent url(../image/ico/ico-page-prev.svg) no-repeat center
+    center;
+  color: #838b9b;
   font-size: 0;
   text-indent: -2000px;
 }
-div.dt-container .dt-paging .fg-button.next{
-  background: transparent url(../image/ico/ico-page-next.svg) no-repeat center center;
-  color: #838B9B;
+div.dt-container .dt-paging .fg-button.next {
+  background: transparent url(../image/ico/ico-page-next.svg) no-repeat center
+    center;
+  color: #838b9b;
   font-size: 0;
   text-indent: -2000px;
 }
-.dt-info{
-  color: #7E8AA8;
+.dt-info {
+  color: #7e8aa8;
   font-size: 13px;
   font-weight: 500;
 }
-.dt-info strong{
-  color: #348BF2;
+.dt-info strong {
+  color: #348bf2;
 }
