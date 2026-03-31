@@ -64,6 +64,12 @@ var work = [
 	{ "cate":"m03", "dep01":"보고서", "dep02":"결론 수정", "url":"./html/sim/sim-report-result-modify.html", "date":"03-31", "cls": ""},
 
 
+	{ "cate":"m04", "dep01":"공통", "dep02":"alert 모달", "url":"./html/common/popup-alert.html", "date":"03-31", "cls": ""},
+	{ "cate":"m04", "dep01":"공통", "dep02":"confirm 모달", "url":"./html/common/popup-confirm.html", "date":"03-31", "cls": ""},
+	{ "cate":"m04", "dep01":"공통", "dep02":"폼 모달", "url":"./html/common/popup-add.html", "date":"03-31", "cls": ""},
+	{ "cate":"m04", "dep01":"공통", "dep02":"로딩 모달", "url":"./html/common/popup-loading.html", "date":"03-31", "cls": ""},
+
+
 
 ];
 
