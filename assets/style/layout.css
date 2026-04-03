@@ -504,9 +504,11 @@
 
 .message-card{
   width: 100%;
-  height: 1.5em;
+  height: auto;
+  line-height: 1.5em;
   font-size: 15px;
   font-weight: 500;
+  padding: 0 30px;
 }
 .modal-content .msg {
   width: 100%;
@@ -531,7 +533,10 @@
   background: #fff;
   border-top: 1px solid #ddd;
 }
-
+.message-card + .modal-btn-container{
+  border-top: 0;
+  margin-top: 0;
+}
 
 .loader-wrap {
   background: #fff;
