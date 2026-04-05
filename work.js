@@ -55,7 +55,7 @@ var work = [
 	{ "cate":"m03", "dep01":"타격 스케줄링 결과", "dep02":"목록", "url":"./html/sim/sim-attack-scheduling-list.html", "date":"2026-03-31", "cls": ""},
 
 	{ "cate":"m03", "dep01":"통계", "dep02":"멀티모달 정보통합", "url":"./html/sim/sim-statistics-list.html", "date":"2026-03-31", "cls": ""},
-	{ "cate":"m03", "dep01":"보고서", "dep02":"멀티모달 정보통합", "url":"./html/sim/sim-report-list.html", "date":"작업 대기", "cls": "error"},
+	{ "cate":"m03", "dep01":"보고서", "dep02":"목록", "url":"./html/sim/sim-report-list.html", "date":"2026-04-05", "cls": ""},
 	{ "cate":"m03", "dep01":"보고서", "dep02":"다운로드", "url":"./html/sim/sim-report-down.html", "date":"2026-03-31", "cls": ""},
 	{ "cate":"m03", "dep01":"보고서", "dep02":"삭제", "url":"./html/sim/sim-report-delete.html", "date":"2026-03-31", "cls": ""},
 	{ "cate":"m03", "dep01":"보고서", "dep02":"상황인지 결과 수정", "url":"./html/sim/sim-report-action-modify.html", "date":"2026-03-31", "cls": ""},
