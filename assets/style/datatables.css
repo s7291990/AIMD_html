@@ -4711,3 +4711,9 @@ div.dt-container .dt-paging .fg-button.next {
   background-color: #fdeded !important;
   font-weight: 600;
 }
+#tableGrid td.col-ellipsis {
+  max-width: 240px; /* 원하는 폭 */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

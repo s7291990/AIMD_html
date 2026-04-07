@@ -285,7 +285,13 @@
             </table>
             <script>
               var data = [
-                ["ABED2345", "-", "-", "-", "-"],
+                [
+                  "ABED2345ABED2345ABED2345ABED2345ABED2345",
+                  "-",
+                  "-",
+                  "-",
+                  "-",
+                ],
                 ["ABED2345", "-", "-", "-", "-"],
                 ["ABED2345", "-", "-", "-", "-"],
               ];
@@ -320,6 +326,7 @@
                 //   end: 0, // 오른쪽 고정 없음
                 // },
                 columnDefs: [
+                  { targets: 0, className: "col-ellipsis" }, // ..말줄임 처리를 위해 클래스 추가 className: "col-ellipsis"
                   //{ targets: 0, width: "90px" },
                   //{ targets: 1, width: "150px" },
                   //{ targets: 2, width: "60px" },
