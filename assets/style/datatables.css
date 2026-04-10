@@ -4717,3 +4717,16 @@ div.dt-container .dt-paging .fg-button.next {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+/* Tippy 커스텀 테마 */
+.tippy-box[data-theme~='custom'] {
+    background-color: #333;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 6px;
+    padding: 2px 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.tippy-box[data-theme~='custom'] .tippy-arrow {
+    color: #333;
+}
